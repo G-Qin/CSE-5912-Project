@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: ce0411548f4b80742a9ec696a266fc63
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: "  \u0432"
+    100002: "  \u0432012"
+    100004: //RootNode
+    100006: 1F_Buiding_v1_set_1_HP
+    100008: Object003
+    100010: Object017
+    100012: Object020
+    100014: F012
+    100016: Object022
+    100018: Object023
+    100020: Object024
+    100022: Object025
+    100024: Object026
+    100026: Object027
+    100028: Object028
+    100030: Object029
+    100032: Object030
+    100034: Object031
+    100036: 1F_Buiding_v1_set_1
+    100038: 1F_Buiding_v1_set_2
+    100040: Floor_ceiling_v1
+    100042: Stairs_v1_1
+    100044: Stairs_v1_2
+    100046: Stairs_v1_3
+    100048: Walls_v1
+    100050: Hidden_wall_v1
+    400000: "  \u0432"
+    400002: "  \u0432012"
+    400004: //RootNode
+    400006: 1F_Buiding_v1_set_1_HP
+    400008: Object003
+    400010: Object017
+    400012: Object020
+    400014: F012
+    400016: Object022
+    400018: Object023
+    400020: Object024
+    400022: Object025
+    400024: Object026
+    400026: Object027
+    400028: Object028
+    400030: Object029
+    400032: Object030
+    400034: Object031
+    400036: 1F_Buiding_v1_set_1
+    400038: 1F_Buiding_v1_set_2
+    400040: Floor_ceiling_v1
+    400042: Stairs_v1_1
+    400044: Stairs_v1_2
+    400046: Stairs_v1_3
+    400048: Walls_v1
+    400050: Hidden_wall_v1
+    2100000: 'Material #25'
+    2100002: 'Material #778'
+    2100004: 'Material #163'
+    2100006: 'Material #162'
+    2100008: default
+    2100010: 'Material #779'
+    2100012: 'Material #961'
+    2300000: "  \u0432"
+    2300002: "  \u0432012"
+    2300004: 1F_Buiding_v1_set_1_HP
+    2300006: Object003
+    2300008: Object017
+    2300010: Object020
+    2300012: F012
+    2300014: Object022
+    2300016: Object023
+    2300018: Object024
+    2300020: Object025
+    2300022: Object026
+    2300024: Object027
+    2300026: Object028
+    2300028: Object029
+    2300030: Object030
+    2300032: Object031
+    2300034: 1F_Buiding_v1_set_1
+    2300036: 1F_Buiding_v1_set_2
+    2300038: Floor_ceiling_v1
+    2300040: Stairs_v1_1
+    2300042: Stairs_v1_2
+    2300044: Stairs_v1_3
+    2300046: Walls_v1
+    2300048: Hidden_wall_v1
+    3300000: "  \u0432"
+    3300002: "  \u0432012"
+    3300004: 1F_Buiding_v1_set_1_HP
+    3300006: Object003
+    3300008: Object017
+    3300010: Object020
+    3300012: F012
+    3300014: Object022
+    3300016: Object023
+    3300018: Object024
+    3300020: Object025
+    3300022: Object026
+    3300024: Object027
+    3300026: Object028
+    3300028: Object029
+    3300030: Object030
+    3300032: Object031
+    3300034: 1F_Buiding_v1_set_1
+    3300036: 1F_Buiding_v1_set_2
+    3300038: Floor_ceiling_v1
+    3300040: Stairs_v1_1
+    3300042: Stairs_v1_2
+    3300044: Stairs_v1_3
+    3300046: Walls_v1
+    3300048: Hidden_wall_v1
+    4300000: "  \u0432"
+    4300002: Object017
+    4300004: Object020
+    4300006: 1F_Buiding_v1_set_1_HP
+    4300008: Object003
+    4300010: "  \u0432012"
+    4300012: F012
+    4300014: Object022
+    4300016: Object023
+    4300018: Object024
+    4300020: Object025
+    4300022: Object026
+    4300024: Object027
+    4300026: Object028
+    4300028: Object029
+    4300030: Object030
+    4300032: Object031
+    4300034: 1F_Buiding_v1_set_2
+    4300036: Walls_v1
+    4300038: 1F_Buiding_v1_set_1
+    4300040: Floor_ceiling_v1
+    4300042: Stairs_v1_3
+    4300044: Stairs_v1_2
+    4300046: Stairs_v1_1
+    4300048: Hidden_wall_v1
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

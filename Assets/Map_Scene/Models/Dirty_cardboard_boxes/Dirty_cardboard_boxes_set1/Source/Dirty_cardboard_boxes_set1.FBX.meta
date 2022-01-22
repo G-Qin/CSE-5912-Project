@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: cedb4f4868d3abb429bfe81411bb4502
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Dirty_cardboard_box_v1_1
+    100002: Dirty_cardboard_box_v1_2
+    100004: Dirty_cardboard_box_v1_3
+    100006: Dirty_cardboard_box_v2_1
+    100008: Dirty_cardboard_box_v2_2
+    100010: Dirty_cardboard_box_v2_3
+    100012: Dirty_cardboard_box_v2_4
+    100014: Dirty_cardboard_box_v2_5
+    100016: Dirty_cardboard_box_v2_6
+    100018: Dirty_cardboard_box_v3_1
+    100020: Dirty_cardboard_box_v3_2
+    100022: Dirty_cardboard_box_v3_3
+    100024: Dirty_cardboard_box_v3_4
+    100026: //RootNode
+    100028: Unfold_cardboard_box_v1_1
+    100030: Unfold_cardboard_box_v1_2
+    100032: Unfold_cardboard_box_v1_3
+    100034: Unfold_cardboard_box_v1_4
+    100036: Unfold_cardboard_box_v1_5
+    100038: Dirty_cardboard_box_set1
+    100040: Dirty_cardboard_box_set2
+    100042: Dirty_cardboard_box_set3
+    100044: Dirty_cardboard_box_set4
+    100046: Dirty_cardboard_box_set5
+    400000: Dirty_cardboard_box_v1_1
+    400002: Dirty_cardboard_box_v1_2
+    400004: Dirty_cardboard_box_v1_3
+    400006: Dirty_cardboard_box_v2_1
+    400008: Dirty_cardboard_box_v2_2
+    400010: Dirty_cardboard_box_v2_3
+    400012: Dirty_cardboard_box_v2_4
+    400014: Dirty_cardboard_box_v2_5
+    400016: Dirty_cardboard_box_v2_6
+    400018: Dirty_cardboard_box_v3_1
+    400020: Dirty_cardboard_box_v3_2
+    400022: Dirty_cardboard_box_v3_3
+    400024: Dirty_cardboard_box_v3_4
+    400026: //RootNode
+    400028: Unfold_cardboard_box_v1_1
+    400030: Unfold_cardboard_box_v1_2
+    400032: Unfold_cardboard_box_v1_3
+    400034: Unfold_cardboard_box_v1_4
+    400036: Unfold_cardboard_box_v1_5
+    400038: Dirty_cardboard_box_set1
+    400040: Dirty_cardboard_box_set2
+    400042: Dirty_cardboard_box_set3
+    400044: Dirty_cardboard_box_set4
+    400046: Dirty_cardboard_box_set5
+    2300000: Dirty_cardboard_box_v1_1
+    2300002: Dirty_cardboard_box_v1_2
+    2300004: Dirty_cardboard_box_v1_3
+    2300006: Dirty_cardboard_box_v2_1
+    2300008: Dirty_cardboard_box_v2_2
+    2300010: Dirty_cardboard_box_v2_3
+    2300012: Dirty_cardboard_box_v2_4
+    2300014: Dirty_cardboard_box_v2_5
+    2300016: Dirty_cardboard_box_v2_6
+    2300018: Dirty_cardboard_box_v3_1
+    2300020: Dirty_cardboard_box_v3_2
+    2300022: Dirty_cardboard_box_v3_3
+    2300024: Dirty_cardboard_box_v3_4
+    2300026: Unfold_cardboard_box_v1_1
+    2300028: Unfold_cardboard_box_v1_2
+    2300030: Unfold_cardboard_box_v1_3
+    2300032: Unfold_cardboard_box_v1_4
+    2300034: Unfold_cardboard_box_v1_5
+    2300036: Dirty_cardboard_box_set1
+    2300038: Dirty_cardboard_box_set2
+    2300040: Dirty_cardboard_box_set3
+    2300042: Dirty_cardboard_box_set4
+    2300044: Dirty_cardboard_box_set5
+    3300000: Dirty_cardboard_box_v1_1
+    3300002: Dirty_cardboard_box_v1_2
+    3300004: Dirty_cardboard_box_v1_3
+    3300006: Dirty_cardboard_box_v2_1
+    3300008: Dirty_cardboard_box_v2_2
+    3300010: Dirty_cardboard_box_v2_3
+    3300012: Dirty_cardboard_box_v2_4
+    3300014: Dirty_cardboard_box_v2_5
+    3300016: Dirty_cardboard_box_v2_6
+    3300018: Dirty_cardboard_box_v3_1
+    3300020: Dirty_cardboard_box_v3_2
+    3300022: Dirty_cardboard_box_v3_3
+    3300024: Dirty_cardboard_box_v3_4
+    3300026: Unfold_cardboard_box_v1_1
+    3300028: Unfold_cardboard_box_v1_2
+    3300030: Unfold_cardboard_box_v1_3
+    3300032: Unfold_cardboard_box_v1_4
+    3300034: Unfold_cardboard_box_v1_5
+    3300036: Dirty_cardboard_box_set1
+    3300038: Dirty_cardboard_box_set2
+    3300040: Dirty_cardboard_box_set3
+    3300042: Dirty_cardboard_box_set4
+    3300044: Dirty_cardboard_box_set5
+    4300000: Dirty_cardboard_box_v2_1
+    4300002: Dirty_cardboard_box_v1_3
+    4300004: Dirty_cardboard_box_v1_1
+    4300006: Dirty_cardboard_box_v1_2
+    4300008: Unfold_cardboard_box_v1_3
+    4300010: Unfold_cardboard_box_v1_2
+    4300012: Dirty_cardboard_box_v3_4
+    4300014: Dirty_cardboard_box_v3_2
+    4300016: Dirty_cardboard_box_v3_1
+    4300018: Dirty_cardboard_box_v3_3
+    4300020: Unfold_cardboard_box_v1_1
+    4300022: Unfold_cardboard_box_v1_4
+    4300024: Unfold_cardboard_box_v1_5
+    4300026: Dirty_cardboard_box_v2_3
+    4300028: Dirty_cardboard_box_v2_6
+    4300030: Dirty_cardboard_box_v2_5
+    4300032: Dirty_cardboard_box_v2_4
+    4300034: Dirty_cardboard_box_v2_2
+    4300036: Dirty_cardboard_box_set1
+    4300038: Dirty_cardboard_box_set2
+    4300040: Dirty_cardboard_box_set3
+    4300042: Dirty_cardboard_box_set4
+    4300044: Dirty_cardboard_box_set5
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

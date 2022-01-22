@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 073273998feb5774c8f717103392aaa4
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box_v1_1_FB1
+    100002: Box_v2_1_FB1
+    100004: Box_v3_1_FB1
+    100006: Box_v4_1_FB1
+    100008: Box_v5_1_FB1
+    100010: Box_v6_1_FB1
+    100012: Box_v7_1_FB1
+    100014: //RootNode
+    100016: Food_v10_1_FB1
+    100018: Food_v1_1_FB1
+    100020: Food_v2_1_FB1
+    100022: Food_v3_1_FB1
+    100024: Food_v4_1_FB1
+    100026: Food_v5_1_FB1
+    100028: Food_v6_1_FB1
+    100030: Food_v7_1_FB1
+    100032: Food_v8_1_FB1
+    100034: Food_v9_1_FB1
+    100036: Boxes_set1_FB1
+    100038: Boxes_set2_FB1
+    100040: Boxes_set3_FB1
+    100042: Boxes_set4_FB1
+    100044: Boxes_set5_FB1
+    100046: Boxes_set6_FB1
+    100048: Boxes_set7_FB1
+    100050: Food_set1_FB1
+    100052: Food_set2_FB1
+    100054: Food_set3_FB1
+    100056: Food_set4_FB1
+    400000: Box_v1_1_FB1
+    400002: Box_v2_1_FB1
+    400004: Box_v3_1_FB1
+    400006: Box_v4_1_FB1
+    400008: Box_v5_1_FB1
+    400010: Box_v6_1_FB1
+    400012: Box_v7_1_FB1
+    400014: //RootNode
+    400016: Food_v10_1_FB1
+    400018: Food_v1_1_FB1
+    400020: Food_v2_1_FB1
+    400022: Food_v3_1_FB1
+    400024: Food_v4_1_FB1
+    400026: Food_v5_1_FB1
+    400028: Food_v6_1_FB1
+    400030: Food_v7_1_FB1
+    400032: Food_v8_1_FB1
+    400034: Food_v9_1_FB1
+    400036: Boxes_set1_FB1
+    400038: Boxes_set2_FB1
+    400040: Boxes_set3_FB1
+    400042: Boxes_set4_FB1
+    400044: Boxes_set5_FB1
+    400046: Boxes_set6_FB1
+    400048: Boxes_set7_FB1
+    400050: Food_set1_FB1
+    400052: Food_set2_FB1
+    400054: Food_set3_FB1
+    400056: Food_set4_FB1
+    2100000: 'Material #560'
+    2300000: Box_v1_1_FB1
+    2300002: Box_v2_1_FB1
+    2300004: Box_v3_1_FB1
+    2300006: Box_v4_1_FB1
+    2300008: Box_v5_1_FB1
+    2300010: Box_v6_1_FB1
+    2300012: Box_v7_1_FB1
+    2300014: Food_v10_1_FB1
+    2300016: Food_v1_1_FB1
+    2300018: Food_v2_1_FB1
+    2300020: Food_v3_1_FB1
+    2300022: Food_v4_1_FB1
+    2300024: Food_v5_1_FB1
+    2300026: Food_v6_1_FB1
+    2300028: Food_v7_1_FB1
+    2300030: Food_v8_1_FB1
+    2300032: Food_v9_1_FB1
+    2300034: Boxes_set1_FB1
+    2300036: Boxes_set2_FB1
+    2300038: Boxes_set3_FB1
+    2300040: Boxes_set4_FB1
+    2300042: Boxes_set5_FB1
+    2300044: Boxes_set6_FB1
+    2300046: Boxes_set7_FB1
+    2300048: Food_set1_FB1
+    2300050: Food_set2_FB1
+    2300052: Food_set3_FB1
+    2300054: Food_set4_FB1
+    3300000: Box_v1_1_FB1
+    3300002: Box_v2_1_FB1
+    3300004: Box_v3_1_FB1
+    3300006: Box_v4_1_FB1
+    3300008: Box_v5_1_FB1
+    3300010: Box_v6_1_FB1
+    3300012: Box_v7_1_FB1
+    3300014: Food_v10_1_FB1
+    3300016: Food_v1_1_FB1
+    3300018: Food_v2_1_FB1
+    3300020: Food_v3_1_FB1
+    3300022: Food_v4_1_FB1
+    3300024: Food_v5_1_FB1
+    3300026: Food_v6_1_FB1
+    3300028: Food_v7_1_FB1
+    3300030: Food_v8_1_FB1
+    3300032: Food_v9_1_FB1
+    3300034: Boxes_set1_FB1
+    3300036: Boxes_set2_FB1
+    3300038: Boxes_set3_FB1
+    3300040: Boxes_set4_FB1
+    3300042: Boxes_set5_FB1
+    3300044: Boxes_set6_FB1
+    3300046: Boxes_set7_FB1
+    3300048: Food_set1_FB1
+    3300050: Food_set2_FB1
+    3300052: Food_set3_FB1
+    3300054: Food_set4_FB1
+    4300000: Food_v10_1_FB1
+    4300002: Box_v1_1_FB1
+    4300004: Box_v2_1_FB1
+    4300006: Box_v3_1_FB1
+    4300008: Box_v4_1_FB1
+    4300010: Box_v5_1_FB1
+    4300012: Box_v6_1_FB1
+    4300014: Box_v7_1_FB1
+    4300016: Food_v1_1_FB1
+    4300018: Food_v2_1_FB1
+    4300020: Food_v3_1_FB1
+    4300022: Food_v4_1_FB1
+    4300024: Food_v5_1_FB1
+    4300026: Food_v6_1_FB1
+    4300028: Food_v7_1_FB1
+    4300030: Food_v8_1_FB1
+    4300032: Food_v9_1_FB1
+    4300034: Boxes_set1_FB1
+    4300036: Boxes_set5_FB1
+    4300038: Boxes_set6_FB1
+    4300040: Boxes_set7_FB1
+    4300042: Boxes_set4_FB1
+    4300044: Boxes_set2_FB1
+    4300046: Boxes_set3_FB1
+    4300048: Food_set1_FB1
+    4300050: Food_set2_FB1
+    4300052: Food_set3_FB1
+    4300054: Food_set4_FB1
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

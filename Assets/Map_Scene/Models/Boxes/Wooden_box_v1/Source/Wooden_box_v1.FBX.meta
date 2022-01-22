@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: dcf39c3c160b51b49af399efea061f40
+timeCreated: 1488375529
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box004
+    100006: Box005
+    100008: //RootNode
+    100010: Wooden_box_v1_LD1
+    100012: Wooden_box_v1_LD1square
+    100014: Wooden_box_v1_LD2
+    100016: Wooden_box_v1_LD2square
+    100018: Wooden_box_v1_LD1_SET1
+    100020: Wooden_box_v1_LD1_SET2
+    100022: Wooden_box_v1_LD1_SET3
+    100024: Wooden_box_v1_LD1_SET4
+    100026: Wooden_box_v1_LD1_SET5
+    100028: Wooden_box_v1_LD2_SET1
+    100030: Wooden_box_v1_LD2_SET2
+    100032: Wooden_box_v1_LD2_SET3
+    100034: Wooden_box_v1_LD2_SET4
+    100036: Wooden_box_v1_LD2_SET5
+    400000: Box001
+    400002: Box002
+    400004: Box004
+    400006: Box005
+    400008: //RootNode
+    400010: Wooden_box_v1_LD1
+    400012: Wooden_box_v1_LD1square
+    400014: Wooden_box_v1_LD2
+    400016: Wooden_box_v1_LD2square
+    400018: Wooden_box_v1_LD1_SET1
+    400020: Wooden_box_v1_LD1_SET2
+    400022: Wooden_box_v1_LD1_SET3
+    400024: Wooden_box_v1_LD1_SET4
+    400026: Wooden_box_v1_LD1_SET5
+    400028: Wooden_box_v1_LD2_SET1
+    400030: Wooden_box_v1_LD2_SET2
+    400032: Wooden_box_v1_LD2_SET3
+    400034: Wooden_box_v1_LD2_SET4
+    400036: Wooden_box_v1_LD2_SET5
+    2300000: Box001
+    2300002: Box002
+    2300004: Box004
+    2300006: Box005
+    2300008: Wooden_box_v1_LD1
+    2300010: Wooden_box_v1_LD1square
+    2300012: Wooden_box_v1_LD2
+    2300014: Wooden_box_v1_LD2square
+    2300016: Wooden_box_v1_LD1_SET1
+    2300018: Wooden_box_v1_LD1_SET2
+    2300020: Wooden_box_v1_LD1_SET3
+    2300022: Wooden_box_v1_LD1_SET4
+    2300024: Wooden_box_v1_LD1_SET5
+    2300026: Wooden_box_v1_LD2_SET1
+    2300028: Wooden_box_v1_LD2_SET2
+    2300030: Wooden_box_v1_LD2_SET3
+    2300032: Wooden_box_v1_LD2_SET4
+    2300034: Wooden_box_v1_LD2_SET5
+    3300000: Box001
+    3300002: Box002
+    3300004: Box004
+    3300006: Box005
+    3300008: Wooden_box_v1_LD1
+    3300010: Wooden_box_v1_LD1square
+    3300012: Wooden_box_v1_LD2
+    3300014: Wooden_box_v1_LD2square
+    3300016: Wooden_box_v1_LD1_SET1
+    3300018: Wooden_box_v1_LD1_SET2
+    3300020: Wooden_box_v1_LD1_SET3
+    3300022: Wooden_box_v1_LD1_SET4
+    3300024: Wooden_box_v1_LD1_SET5
+    3300026: Wooden_box_v1_LD2_SET1
+    3300028: Wooden_box_v1_LD2_SET2
+    3300030: Wooden_box_v1_LD2_SET3
+    3300032: Wooden_box_v1_LD2_SET4
+    3300034: Wooden_box_v1_LD2_SET5
+    4300000: Box001
+    4300002: Box002
+    4300004: Box004
+    4300006: Box005
+    4300008: Wooden_box_v1_LD1
+    4300010: Wooden_box_v1_LD2
+    4300012: Wooden_box_v1_LD1square
+    4300014: Wooden_box_v1_LD2square
+    4300016: Wooden_box_v1_LD2_SET1
+    4300018: Wooden_box_v1_LD1_SET1
+    4300020: Wooden_box_v1_LD1_SET5
+    4300022: Wooden_box_v1_LD1_SET4
+    4300024: Wooden_box_v1_LD1_SET3
+    4300026: Wooden_box_v1_LD1_SET2
+    4300028: Wooden_box_v1_LD2_SET5
+    4300030: Wooden_box_v1_LD2_SET4
+    4300032: Wooden_box_v1_LD2_SET3
+    4300034: Wooden_box_v1_LD2_SET2
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

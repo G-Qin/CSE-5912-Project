@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: c554e4a8b4ec56045b22fb4f776de240
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Pipe_part_v1_1
+    100004: Pipe_part_v1_2
+    100006: Pipe_part_v1_3
+    100008: Pipe_part_v1_4
+    100010: Pipe_sup_v1_1
+    100012: Pipe_sup_v1_2
+    100014: Pipe_set_v1_1
+    100016: Pipe_set_v1_10
+    100018: Pipe_set_v1_11
+    100020: Pipe_set_v1_2
+    100022: Pipe_set_v1_3
+    100024: Pipe_set_v1_4
+    100026: Pipe_set_v1_5
+    100028: Pipe_set_v1_6
+    100030: Pipe_set_v1_7
+    100032: Pipe_set_v1_8
+    100034: Pipe_set_v1_9
+    400000: //RootNode
+    400002: Pipe_part_v1_1
+    400004: Pipe_part_v1_2
+    400006: Pipe_part_v1_3
+    400008: Pipe_part_v1_4
+    400010: Pipe_sup_v1_1
+    400012: Pipe_sup_v1_2
+    400014: Pipe_set_v1_1
+    400016: Pipe_set_v1_10
+    400018: Pipe_set_v1_11
+    400020: Pipe_set_v1_2
+    400022: Pipe_set_v1_3
+    400024: Pipe_set_v1_4
+    400026: Pipe_set_v1_5
+    400028: Pipe_set_v1_6
+    400030: Pipe_set_v1_7
+    400032: Pipe_set_v1_8
+    400034: Pipe_set_v1_9
+    2100000: default
+    2300000: //RootNode
+    2300002: Pipe_part_v1_1
+    2300004: Pipe_part_v1_2
+    2300006: Pipe_part_v1_3
+    2300008: Pipe_part_v1_4
+    2300010: Pipe_sup_v1_1
+    2300012: Pipe_sup_v1_2
+    2300014: Pipe_set_v1_1
+    2300016: Pipe_set_v1_10
+    2300018: Pipe_set_v1_11
+    2300020: Pipe_set_v1_2
+    2300022: Pipe_set_v1_3
+    2300024: Pipe_set_v1_4
+    2300026: Pipe_set_v1_5
+    2300028: Pipe_set_v1_6
+    2300030: Pipe_set_v1_7
+    2300032: Pipe_set_v1_8
+    2300034: Pipe_set_v1_9
+    3300000: //RootNode
+    3300002: Pipe_part_v1_1
+    3300004: Pipe_part_v1_2
+    3300006: Pipe_part_v1_3
+    3300008: Pipe_part_v1_4
+    3300010: Pipe_sup_v1_1
+    3300012: Pipe_sup_v1_2
+    3300014: Pipe_set_v1_1
+    3300016: Pipe_set_v1_10
+    3300018: Pipe_set_v1_11
+    3300020: Pipe_set_v1_2
+    3300022: Pipe_set_v1_3
+    3300024: Pipe_set_v1_4
+    3300026: Pipe_set_v1_5
+    3300028: Pipe_set_v1_6
+    3300030: Pipe_set_v1_7
+    3300032: Pipe_set_v1_8
+    3300034: Pipe_set_v1_9
+    4300000: Object007
+    4300002: Pipe_sup_v1_1
+    4300004: Pipe_part_v1_4
+    4300006: Pipe_part_v1_3
+    4300008: Pipe_part_v1_2
+    4300010: Pipe_part_v1_1
+    4300012: Pipe_sup_v1_2
+    4300014: Pipe_set_v1_7
+    4300016: Pipe_set_v1_5
+    4300018: Pipe_set_v1_10
+    4300020: Pipe_set_v1_9
+    4300022: Pipe_set_v1_8
+    4300024: Pipe_set_v1_2
+    4300026: Pipe_set_v1_1
+    4300028: Pipe_set_v1_4
+    4300030: Pipe_set_v1_3
+    4300032: Pipe_set_v1_11
+    4300034: Pipe_set_v1_6
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
