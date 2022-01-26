@@ -1412,7 +1412,7 @@ namespace InfimaGames.LowPolyShooterPack
 				return;
 
 			//If we're aiming, multiply by the mouse sensitivity multiplier of the equipped weapon's scope!
-			axisLook *= aiming ? equippedWeaponScope.GetMultiplierMouseSensitivity() : 1.0f;
+			axisLook *= aiming ? equippedWeaponScope.GetMultiplierMouseSensitivity() : 2.0f;
 		}
 
 		/// <summary>
