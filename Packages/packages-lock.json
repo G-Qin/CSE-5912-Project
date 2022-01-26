@@ -13,7 +13,7 @@
       "dependencies": {}
     },
     "com.unity.analytics": {
-      "version": "3.6.11",
+      "version": "3.6.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
