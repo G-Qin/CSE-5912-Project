@@ -4437,6 +4437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_LPSP_FP_CH_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6311201337086346178, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8113310418508224255, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
         type: 3}
       propertyPath: scopeArray.Array.data[4]
@@ -15040,6 +15045,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 712770697}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &336838760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2751027687307977091, guid: 19eadcf8fbed56b4da77ca94c1b4145f,
+    type: 3}
+  m_PrefabInstance: {fileID: 99868385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &336838771
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336838760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 1
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &337842252
 PrefabInstance:
   m_ObjectHideFlags: 0
