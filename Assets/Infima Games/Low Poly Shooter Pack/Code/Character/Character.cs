@@ -570,7 +570,7 @@ namespace InfimaGames.LowPolyShooterPack
 		
 		public override bool IsAiming() => aiming;
 		public override bool IsCursorLocked() => cursorLocked;
-		
+		//573
 		public override bool IsTutorialTextVisible() => tutorialTextVisible;
 		
 		public override Vector2 GetInputMovement() => axisMovement;
