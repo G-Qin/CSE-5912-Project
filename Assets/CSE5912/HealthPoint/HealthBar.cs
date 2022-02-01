@@ -8,6 +8,8 @@ using UnityEngine.UI;
         public Slider slider;
         public Gradient gradient;
         public Image blood;
+       //123
+       //123
         public void SetMaxHealth(int health)
         {
             slider.maxValue = health;
