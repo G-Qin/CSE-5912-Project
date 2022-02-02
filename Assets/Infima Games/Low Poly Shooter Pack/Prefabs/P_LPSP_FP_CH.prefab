@@ -930,6 +930,7 @@ MonoBehaviour:
   speedWalking: 4
   speedAiming: 3.2
   speedRunning: 6.8
+  jumpForce: 2
   walkingMultiplierForward: 1
   walkingMultiplierSideways: 0.8
   walkingMultiplierBackwards: 0.8
@@ -5602,6 +5603,67 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbbb29d2cf3c91741bc1a1b953ca5776,
+        type: 3}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: materialIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: materialHidden
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: offsetAimingLocation.z
+      value: 0.0015
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: fieldOfViewMultiplierAim
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: multiplierMouseSensitivity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: fieldOfViewMultiplierAimWeapon
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: aimingSway.look.location.vertical.z
+      value: -0.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: aimingSway.look.location.horizontal.x
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: aimingSway.movement.location.vertical.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: aimingSway.movement.location.horizontal.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987982012512411943, guid: 9482e0a2ae6a92742bbe72e00f29f763,
+        type: 3}
+      propertyPath: aimingSway.movement.rotation.horizontal.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2990816533845231628, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
