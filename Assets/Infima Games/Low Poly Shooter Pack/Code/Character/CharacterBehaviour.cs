@@ -69,7 +69,11 @@ namespace InfimaGames.LowPolyShooterPack
         public abstract bool IsRunning();
         
         /// <summary>
-        /// Returns true if the character is aiming.
+        /// Returns true if the character is 
+        /// 
+        /// 
+        /// 
+        /// .
         /// </summary>
         public abstract bool IsAiming();
         /// <summary>

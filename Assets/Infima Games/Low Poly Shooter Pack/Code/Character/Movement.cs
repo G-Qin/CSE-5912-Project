@@ -32,11 +32,11 @@ namespace InfimaGames.LowPolyShooterPack
             public Vector3 Update(Vector3 target, float smoothTime) => Value = Vector3.SmoothDamp(Value,
                 target, ref currentVelocity, smoothTime);
         }
-        
+
         #region FIELDS SERIALIZED
 
         [Header("Audio Clips")]
-        
+
         [Tooltip("The audio clip that is played while walking.")]
         [SerializeField]
         private AudioClip audioClipWalking;
@@ -56,6 +56,10 @@ namespace InfimaGames.LowPolyShooterPack
 
         [Tooltip("How fast the player moves while running."), SerializeField]
         private float speedRunning = 9.0f;
+
+        [Tooltip("How high the player moves while jumping")]
+        [SerializeField]
+        private float jumpForce = 2.0f;
         
         [Header("Walking Multipliers")]
         
@@ -144,7 +148,7 @@ namespace InfimaGames.LowPolyShooterPack
         }
 
         /// Initializes the FpsController on start.
-        protected override  void Start()
+        protected override void Start()
         {
             //Rigidbody Setup.
             rigidBody = GetComponent<Rigidbody>();
@@ -191,13 +195,21 @@ namespace InfimaGames.LowPolyShooterPack
         {
             //Move.
             MoveCharacter();
-            
+
+            //Jump.
+            rigidBody.AddForce((Vector3.down * 100), ForceMode.Acceleration);
+            if (Input.GetKeyDown(KeyCode.Space) && grounded)
+            {
+                rigidBody.AddForce(new Vector3(0f, 100f, 0f) * jumpForce, ForceMode.Impulse);
+                Debug.Log("Jump!");
+            }
+
             //Unground.
             grounded = false;
         }
 
         /// Moves the camera to the character, processes jumping and plays sounds every frame.
-        protected override  void Update()
+        protected override void Update()
         {
             //Get the equipped weapon!
             equippedWeapon = playerCharacter.GetInventory().GetEquipped();
@@ -224,7 +236,9 @@ namespace InfimaGames.LowPolyShooterPack
                 movement *= speedRunning;
             else
             {
-                //Aiming speed calculation.
+                //
+                //
+                //speed calculation.
                 if (playerCharacter.IsAiming())
                     movement *= speedAiming;
                 else
@@ -245,9 +259,10 @@ namespace InfimaGames.LowPolyShooterPack
                 movement *= equippedWeapon.GetMultiplierMovementSpeed();
 
             #endregion
-            
+
             //Update Velocity.
-            Velocity = new Vector3(movement.x, 0.0f, movement.z);
+            //(Velocity = new Vector3(movement.x, 0.0f, movement.z);)
+            Velocity = new Vector3(movement.x, Velocity.y, movement.z);
         }
 
         /// <summary>

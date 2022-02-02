@@ -1337,6 +1337,7 @@ namespace InfimaGames.LowPolyShooterPack
 				return;
 			
 			Log.wtf("Jumping!");
+
 		}
 		/// <summary>
 		/// Next Inventory Weapon.
@@ -1411,7 +1412,11 @@ namespace InfimaGames.LowPolyShooterPack
 			if (equippedWeaponScope == null)
 				return;
 
-			//If we're aiming, multiply by the mouse sensitivity multiplier of the equipped weapon's scope!
+			//If we're
+			//
+			//
+			//
+			//, multiply by the mouse sensitivity multiplier of the equipped weapon's scope!
 			axisLook *= aiming ? equippedWeaponScope.GetMultiplierMouseSensitivity() : 2.0f;
 		}
 
