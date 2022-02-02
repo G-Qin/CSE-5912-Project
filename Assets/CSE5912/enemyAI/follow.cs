@@ -10,7 +10,10 @@ public class follow : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        Player=GameObject.Find("/P_LPSP_FP_CH_1").transform;
         StartCoroutine("waiter");
+
+        //Player=GameObject.Find("/P_LPSP_FP_CH_1/SK_FP_CH_Default_Root/Armature/root/pelvis/spine_01/spine_02/spine_03/neck_01/head/SOCKET_Camera/Camera/Camera Depth");
     }
 
     // Update is called once per frame
@@ -20,7 +23,7 @@ public class follow : MonoBehaviour
     IEnumerator waiter()
     {
         float dist = Vector3.Distance(Player.position, transform.position);
-        if (dist < 2)
+        if (dist < 1)
         {
             enemy.ResetPath();
             anim.SetBool("run", false);

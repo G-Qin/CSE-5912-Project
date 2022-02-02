@@ -30,6 +30,7 @@ using UnityEngine;
                 if (healthSystem.getHealth() == 0)
                 {
                     gameObject.SetActive(false);
+                    Destroy(gameObject);
                 }
             }
         }
