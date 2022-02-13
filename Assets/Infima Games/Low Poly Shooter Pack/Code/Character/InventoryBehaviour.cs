@@ -1,7 +1,8 @@
 ﻿// Copyright 2021, Infima Games. All Rights Reserved.
 
 using UnityEngine;
-
+using System;
+using System.Collections.Generic;
 namespace InfimaGames.LowPolyShooterPack
 {
     /// <summary>
@@ -41,7 +42,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// PlayerCharacter component to run this with the index it wants to equip!
         /// </summary>
         /// <param name="equippedAtStart">Inventory index of the weapon we want to equip when the game starts.</param>
-        public abstract void Init(int equippedAtStart = 0);
+        public abstract void Init(int equippedAtStart = 0, List<int> available1 = null);
         
         /// <summary>
         /// Equips a Weapon.

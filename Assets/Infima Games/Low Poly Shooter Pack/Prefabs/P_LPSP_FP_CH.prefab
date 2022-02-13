@@ -948,6 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponIndexEquippedAtStart: 0
+  available: 
   inventory: {fileID: 8195332293463410009}
   grenadesUnlimited: 0
   grenadeTotal: 10
@@ -6323,7 +6324,7 @@ PrefabInstance:
     - target: {fileID: 4025147541009580120, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4028604364427280444, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
