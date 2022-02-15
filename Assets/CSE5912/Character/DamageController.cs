@@ -23,15 +23,15 @@ using UnityEngine;
 
         private void OnCollisionEnter(Collision collisionInfo)
         {
-            Debug.Log("Hit!!" + collisionInfo.collider.tag);
+        
             if (collisionInfo.collider.tag == "Bullet")
             {
                 healthSystem.Damage(bulletDamage);
-                if (healthSystem.getHealth() == 0)
-                {
-                    gameObject.SetActive(false);
-                    Destroy(gameObject);
-                }
+                //if (healthSystem.getHealth() == 0)
+                //{
+                //    gameObject.SetActive(false);
+                //    Destroy(gameObject);
+                //}
             }
         }
 

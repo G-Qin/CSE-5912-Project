@@ -17,6 +17,7 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Bullet
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
