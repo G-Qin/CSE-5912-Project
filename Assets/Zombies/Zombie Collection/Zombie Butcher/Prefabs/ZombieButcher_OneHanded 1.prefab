@@ -1045,7 +1045,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135728509634986}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2063,9 +2063,10 @@ GameObject:
   - component: {fileID: 4449334978237180}
   - component: {fileID: 33005507257530324}
   - component: {fileID: 23384961919159982}
+  - component: {fileID: 5752981997852564761}
   m_Layer: 0
   m_Name: "\u0421leaver"
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2077,14 +2078,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262415231713554}
-  m_LocalRotation: {x: 0.56937, y: -0.32846203, z: 0.5117615, w: 0.5532005}
-  m_LocalPosition: {x: -0.05044067, y: -0.022857701, z: -0.006538089}
+  m_LocalRotation: {x: 0.5332334, y: -0.38338858, z: 0.5674385, w: 0.49667782}
+  m_LocalPosition: {x: -0.087078206, y: -0.028864902, z: 0.0061350213}
   m_LocalScale: {x: 1.2073946, y: 1.2073876, z: 1.2073934}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4269475979200598}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -254.75, y: -121.479996, z: -36.05298}
 --- !u!33 &33005507257530324
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2135,6 +2136,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5752981997852564761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262415231713554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46954796, y: 0.16597508, z: 0.03219319}
+  m_Center: {x: -0.15631579, y: 0.021513382, z: -0.000000015769274}
 --- !u!1 &1277121234322354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,6 +2482,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4453771559253448}
   - component: {fileID: 137693239539344476}
+  - component: {fileID: 5283519759242980049}
+  - component: {fileID: 3088787492136348935}
   m_Layer: 0
   m_Name: Z5 skin LOD0
   m_TagString: Untagged
@@ -2483,7 +2499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314251365405736}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.000000059604645, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000000059604645, y: 0.623, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2593,6 +2609,32 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08075574, y: -0.032065265, z: -0.0000019073486}
     m_Extent: {x: 0.7877662, y: 0.19583634, z: 0.9161068}
   m_DirtyAABB: 0
+--- !u!114 &5283519759242980049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314251365405736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b6c1dc97e070e42b1191886e03b6d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSystem: {fileID: 1494085904}
+--- !u!65 &3088787492136348935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314251365405736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.4}
+  m_Center: {x: 0.0000019418344, y: -0.0067784972, z: 0.9669868}
 --- !u!1 &1343869550171848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,7 +3516,7 @@ GameObject:
   - component: {fileID: 4999949016375856}
   m_Layer: 0
   m_Name: CATRigHub001
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
