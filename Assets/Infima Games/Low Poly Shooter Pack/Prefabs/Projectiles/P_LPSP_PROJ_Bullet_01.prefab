@@ -191,7 +191,7 @@ MonoBehaviour:
   destroyAfter: 5
   destroyOnImpact: 1
   minDestroyTime: 0.01
-  maxDestroyTime: 0.05
+  maxDestroyTime: 0.7
   bloodImpactPrefabs:
   - {fileID: 4418440862474872, guid: a845e59c374ae0240812749e46f13033, type: 3}
   metalImpactPrefabs:
