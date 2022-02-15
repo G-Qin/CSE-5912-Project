@@ -17,6 +17,7 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Bullet
+  - AmmoBox
   layers:
   - Default
   - TransparentFX
