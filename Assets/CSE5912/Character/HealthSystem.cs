@@ -12,16 +12,24 @@ using UnityEngine;
             maxHealth = 100;
             health = maxHealth;
             healthbar.SetMaxHealth(maxHealth);
-            //Debug.Log(100);
         }
 
-        //public HealthSystem(int maxHealth)
-        //{
-        //    this.maxHealth = maxHealth;
-        //    health = maxHealth;
-        //}
+    //public HealthSystem(int maxHealth)
+    //{
+    //    this.maxHealth = maxHealth;
+    //    health = maxHealth;
+    //}
 
-        public int getHealth()
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+    }
+
+    public int getHealth()
         {
             return health;
         }
@@ -35,8 +43,6 @@ using UnityEngine;
                 health = 0;
             }
             healthbar.SetHealth(health);
-            //Debug.Log("Damage: " + damageValue);
-           // Debug.Log("Current Health" + health);
         }
 
         public void Heal(int healValue)
