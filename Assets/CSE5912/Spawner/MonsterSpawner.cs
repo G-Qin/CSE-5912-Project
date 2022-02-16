@@ -29,7 +29,7 @@ public class MonsterSpawner : MonoBehaviour
         if(time>10){
            Spawn();
         }   
-        // Debug.Log(time);
+        //Debug.Log(time);
     }
 
     void Spawn(){

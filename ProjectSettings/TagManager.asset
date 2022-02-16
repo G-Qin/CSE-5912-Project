@@ -18,9 +18,7 @@ TagManager:
   - Wood
   - Bullet
   - Enemy
-  - AmmoBox
   - EnemyWeapon
-
   layers:
   - Default
   - TransparentFX
