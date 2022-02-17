@@ -24,7 +24,8 @@ namespace InfimaGames.LowPolyShooterPack
 		private int weaponIndexEquippedAtStart;
 		[Tooltip("Determines the list of the weapon to equip when the game starts.")]
 		[SerializeField]
-		private List<int> available;
+		// private List<int> available;
+		public List<int> available;
 
 		[Tooltip("Inventory.")]
 		[SerializeField]
@@ -881,7 +882,15 @@ namespace InfimaGames.LowPolyShooterPack
 			const string boolName = "Holstered";
 			characterAnimator.SetBool(boolName, holstered);	
 		}
-		
+
+		/// <summary>
+		/// Update the cursor's status outside of this script
+		/// </summary>
+		public void UpdateCursor()
+        {
+			cursorLocked = !cursorLocked;
+        }
+
 		#region ACTION CHECKS
 
 		/// <summary>
