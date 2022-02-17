@@ -192,7 +192,7 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
-                    ""id"": ""4d55425b-09f7-4ef9-94c5-c9ea09321046"",
+                    ""id"": ""b30c4f18-7de9-486c-8ca0-39b81536242d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -631,7 +631,7 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1e44af4c-262b-4666-b5b5-b25c3f115e39"",
+                    ""id"": ""f25c5700-2d7d-49c3-9070-6914f7e32cd4"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
