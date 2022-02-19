@@ -9,23 +9,11 @@ EditorBuildSettings:
     path: Assets/Menu_Scene/Menu_Scene.unity
     guid: b30ca8043ad468d4981a1171cb473d4f
   - enabled: 1
-    path: Assets/Loading Scene/Loading Scene.unity
-    guid: 50e6cee9d84b48a4dba0cfe2013816d4
+    path: Assets/CSE5912/Cutscene/Cutscene.unity
+    guid: 561795a5512436745b224dd6dc03435a
   - enabled: 1
     path: Assets/Map_Scene/Map_v7.unity
     guid: 35b5f23b3594c4c409bf468268831e84
-  - enabled: 0
-    path: Assets/Infima Games/Low Poly Shooter Pack/Scenes/S_Demo_Warzone.unity
-    guid: 93c22658146787c41b6cf6e8e031097c
-  - enabled: 0
-    path: Assets/Infima Games/Low Poly Shooter Pack/Scenes/S_Demo_Defense.unity
-    guid: 5622a2e7311e3e743b6d99e44feb8998
-  - enabled: 0
-    path: Assets/Infima Games/Low Poly Shooter Pack/Scenes/S_Demo_Desert.unity
-    guid: 8b18da02b00ef7f48b1c4cd497671301
-  - enabled: 0
-    path: Assets/Infima Games/Low Poly Shooter Pack/Scenes/S_Demo_Plane.unity
-    guid: d2829262d7f01cb43802f9540e85d63a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9eb07e2d669e9c94e9d7d3c782a916f7,
       type: 2}
