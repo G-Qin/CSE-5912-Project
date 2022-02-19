@@ -1,6 +1,7 @@
 ﻿// Copyright 2021, Infima Games. All Rights Reserved.
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
@@ -21,7 +22,11 @@ namespace InfimaGames.LowPolyShooterPack
 		[Tooltip("Determines the index of the weapon to equip when the game starts.")]
 		[SerializeField]
 		private int weaponIndexEquippedAtStart;
-		
+		[Tooltip("Determines the list of the weapon to equip when the game starts.")]
+		[SerializeField]
+		// private List<int> available;
+		public List<int> available;
+
 		[Tooltip("Inventory.")]
 		[SerializeField]
 		private InventoryBehaviour inventory;
@@ -361,7 +366,7 @@ namespace InfimaGames.LowPolyShooterPack
 			characterKinematics = GetComponent<CharacterKinematics>();
 
 			//Initialize Inventory.
-			inventory.Init(weaponIndexEquippedAtStart);
+			inventory.Init(weaponIndexEquippedAtStart, available);
 
 			//Refresh!
 			RefreshWeaponSetup();
@@ -877,7 +882,15 @@ namespace InfimaGames.LowPolyShooterPack
 			const string boolName = "Holstered";
 			characterAnimator.SetBool(boolName, holstered);	
 		}
-		
+
+		/// <summary>
+		/// Update the cursor's status outside of this script
+		/// </summary>
+		public void UpdateCursor()
+        {
+			cursorLocked = !cursorLocked;
+        }
+
 		#region ACTION CHECKS
 
 		/// <summary>

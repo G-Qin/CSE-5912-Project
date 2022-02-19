@@ -12,7 +12,7 @@ using UnityEngine;
             maxHealth = 100;
             health = maxHealth;
             healthbar.SetMaxHealth(maxHealth);
-            Debug.Log(100);
+            //Debug.Log(100);
         }
 
         //public HealthSystem(int maxHealth)
@@ -35,8 +35,8 @@ using UnityEngine;
                 health = 0;
             }
             healthbar.SetHealth(health);
-            Debug.Log("Damage: " + damageValue);
-            Debug.Log("Current Health" + health);
+            //Debug.Log("Damage: " + damageValue);
+           // Debug.Log("Current Health" + health);
         }
 
         public void Heal(int healValue)

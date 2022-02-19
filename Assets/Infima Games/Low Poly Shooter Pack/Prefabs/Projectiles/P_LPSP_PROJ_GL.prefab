@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 114875861917848898}
   - component: {fileID: 54297850279867008}
   - component: {fileID: 65026795234975252}
+  - component: {fileID: -3534595250245979550}
   m_Layer: 15
   m_Name: P_LPSP_PROJ_GL
   m_TagString: Bullet
@@ -412,3 +413,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.03620471, y: 0.03620477, z: 0.050596945}
   m_Center: {x: 0.00000014342368, y: -0.00000016670674, z: 0.0008775024}
+--- !u!114 &-3534595250245979550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679295593729814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f452cd3160b6b42acc32467a6a4605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect_1: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c,
+    type: 3}
+  hitEffect_2: {fileID: 1518366863219760, guid: 3d35e81bdc5955041be098ef22e82a3b,
+    type: 3}

@@ -925,6 +925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba9a63e484e8f142b3b13cfd976e290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Upper: {fileID: 0}
+  Lower: {fileID: 0}
+  stepHeight: 3
+  stepSmooth: 0.08
   audioClipWalking: {fileID: 8300000, guid: 74abbbf1b1724e34b894191db38e10a0, type: 3}
   audioClipRunning: {fileID: 8300000, guid: d2add02f58e61e640aba3ae9110591cb, type: 3}
   speedWalking: 4
@@ -948,6 +952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponIndexEquippedAtStart: 0
+  available: 
   inventory: {fileID: 8195332293463410009}
   grenadesUnlimited: 0
   grenadeTotal: 10
@@ -1319,6 +1324,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 207fb2a2-8add-4ddb-bda7-c1887aeb313a
     m_ActionName: Player/Tutorial[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b30c4f18-7de9-486c-8ca0-39b81536242d
+    m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -6323,7 +6332,7 @@ PrefabInstance:
     - target: {fileID: 4025147541009580120, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4028604364427280444, guid: 9482e0a2ae6a92742bbe72e00f29f763,
         type: 3}

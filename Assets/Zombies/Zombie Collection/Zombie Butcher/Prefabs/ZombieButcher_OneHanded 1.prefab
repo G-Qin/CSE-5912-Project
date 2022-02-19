@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 381334404}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: EnemyWeapom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: 1494085904}
   m_Layer: 0
   m_Name: ZombieButcher_OneHanded 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1170,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -2063,9 +2063,10 @@ GameObject:
   - component: {fileID: 4449334978237180}
   - component: {fileID: 33005507257530324}
   - component: {fileID: 23384961919159982}
+  - component: {fileID: 3850347410633737557}
   m_Layer: 0
   m_Name: "\u0421leaver"
-  m_TagString: Untagged
+  m_TagString: EnemyWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2135,6 +2136,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3850347410633737557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262415231713554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46954817, y: 0.16597514, z: 0.032193165}
+  m_Center: {x: -0.15631585, y: 0.021513779, z: 0.000000009286753}
 --- !u!1 &1277121234322354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,6 +2482,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4453771559253448}
   - component: {fileID: 137693239539344476}
+  - component: {fileID: 4691138588571445324}
+  - component: {fileID: 3727615390708941804}
   m_Layer: 0
   m_Name: Z5 skin LOD0
   m_TagString: Untagged
@@ -2593,6 +2609,34 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08075574, y: -0.032065265, z: -0.0000019073486}
     m_Extent: {x: 0.7877662, y: 0.19583634, z: 0.9161068}
   m_DirtyAABB: 0
+--- !u!136 &4691138588571445324
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314251365405736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 0.3916729
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 1.6}
+--- !u!114 &3727615390708941804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314251365405736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcac380af73d446429c9ce86f67f2339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 30
+  healthSystem: {fileID: 1494085904}
 --- !u!1 &1343869550171848
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,6 +35,13 @@ namespace InfimaGames.LowPolyShooterPack
 
         #region FIELDS SERIALIZED
 
+        [Header("Climb")]
+        [SerializeField] GameObject Upper;
+        [SerializeField] GameObject Lower;
+
+        [SerializeField] float stepHeight = 3f;
+        [SerializeField] float stepSmooth = 0.08f;
+
         [Header("Audio Clips")]
 
         [Tooltip("The audio clip that is played while walking.")]
@@ -77,7 +84,10 @@ namespace InfimaGames.LowPolyShooterPack
         [Header("Interpolation")]
 
         [Tooltip("Approximately the amount of time it will take for the player to reach maximum running or walking speed.")]
+
         [SerializeField]
+
+
         private float movementSmoothness = 0.125f;
 
         #endregion
@@ -163,6 +173,8 @@ namespace InfimaGames.LowPolyShooterPack
             
             //Create our smooth velocity helper. Will be useful to get some smoother motion.
             smoothVelocity = new SmoothVelocity();
+
+            Upper.transform.position=new Vector3(Upper.transform.position.x, stepHeight,Upper.transform.position.z);
         }
 
         /// Checks if the character is on the ground.
@@ -195,6 +207,7 @@ namespace InfimaGames.LowPolyShooterPack
         {
             //Move.
             MoveCharacter();
+            stepClimb();
 
             //Jump.
             rigidBody.AddForce((Vector3.down * 100), ForceMode.Acceleration);
@@ -206,6 +219,41 @@ namespace InfimaGames.LowPolyShooterPack
 
             //Unground.
             grounded = false;
+
+            
+        }
+
+        void stepClimb()
+        {
+            RaycastHit hitLower;
+            if (Physics.Raycast(Lower.transform.position,transform.TransformDirection(Vector3.forward),out hitLower,10f))
+            {
+                RaycastHit hitUpper;
+                if(!Physics.Raycast(Upper.transform.position,transform.TransformDirection(Vector3.forward), out hitUpper, 20f))
+                {
+                    rigidBody.position-=new Vector3(0f, -stepSmooth,0f);
+                }
+            }
+
+            RaycastHit hitLower45;
+            if (Physics.Raycast(Lower.transform.position,transform.TransformDirection(1.5f, 0,1),out hitLower45,10f))
+            {
+                RaycastHit hitUpper45;
+                if(!Physics.Raycast(Upper.transform.position,transform.TransformDirection(1.5f, 0,1), out hitUpper45, 20f))
+                {
+                    rigidBody.position-=new Vector3(0f, -stepSmooth,0f);
+                }
+            }
+
+            RaycastHit hitLowerMinus45;
+            if (Physics.Raycast(Lower.transform.position,transform.TransformDirection(-1.5f, 0,1),out hitLowerMinus45,10f))
+            {
+                RaycastHit hitUpperMinus45;
+                if(!Physics.Raycast(Upper.transform.position,transform.TransformDirection(-1.5f, 0,1), out hitUpperMinus45, 20f))
+                {
+                    rigidBody.position-=new Vector3(0f, -stepSmooth,0f);
+                }
+            }
         }
 
         /// Moves the camera to the character, processes jumping and plays sounds every frame.
