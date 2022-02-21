@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-    public class DamageController : MonoBehaviour
+public class DamageController : MonoBehaviour
+{
+    [SerializeField] private int bulletDamage;
+
+    [SerializeField] private HealthSystem healthSystem;
+    public Animator anim;
+    public NavMeshAgent enemy;
+    void Start()
     {
-        [SerializeField] private int bulletDamage;
-
-        [SerializeField] private HealthSystem healthSystem;
-
+        anim = GetComponent<Animator>();
+    }
     //private void OnTriggerEnter(Collider other)
     //{
     //    Debug.Log("Hit!!");
@@ -20,20 +26,34 @@ using UnityEngine;
     //        }
     //    }
     //}
-    
+
     private void OnCollisionEnter(Collision collisionInfo)
+    {
+        //Debug.Log("Hit!!" + collisionInfo.collider.tag);
+        if (collisionInfo.collider.tag == "Bullet")
         {
-            //Debug.Log("Hit!!" + collisionInfo.collider.tag);
-            if (collisionInfo.collider.tag == "Bullet")
+            healthSystem.Damage(bulletDamage);
+            if (healthSystem.getHealth() == 0)
             {
-                healthSystem.Damage(bulletDamage);
-                if (healthSystem.getHealth() == 0)
-                {
-                    gameObject.SetActive(false);
-                    Destroy(gameObject);
-                }
+                enemy.enabled = false;
+                anim.SetBool("dead", true);
+                //StartCoroutine("waiter");
+                //gameObject.SetActive(false);
+                //Destroy(gameObject);
+                Destroy(gameObject, 3.0f);
+            }
+            else
+            {
+                anim.SetBool("dead", false);
             }
         }
 
     }
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(0.1f);
+    }
+
+
+}
 
