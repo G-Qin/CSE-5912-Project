@@ -1029,6 +1029,7 @@ GameObject:
   - component: {fileID: 1615282355}
   - component: {fileID: 1615282356}
   - component: {fileID: 1615282357}
+  - component: {fileID: 1494085903}
   - component: {fileID: 1494085904}
   m_Layer: 0
   m_Name: ZombieButcher_OneHanded 1
@@ -1186,7 +1187,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 360
+  m_AngularSpeed: 120
   m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1210,6 +1211,18 @@ MonoBehaviour:
   enemy: {fileID: 1615282356}
   Player: {fileID: 0}
   anim: {fileID: 95680546787331174}
+--- !u!114 &1494085903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135728509634986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcac380af73d446429c9ce86f67f2339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   bulletDamage: 20
   healthSystem: {fileID: 1494085904}
 --- !u!114 &1494085904
@@ -2624,8 +2637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 30
   healthSystem: {fileID: 1494085904}
-  anim: {fileID: 0}
-  enemy: {fileID: 0}
 --- !u!1 &1343869550171848
 GameObject:
   m_ObjectHideFlags: 0
