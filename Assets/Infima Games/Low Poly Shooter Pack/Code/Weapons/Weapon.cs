@@ -63,7 +63,7 @@ namespace InfimaGames.LowPolyShooterPack
         
         [Tooltip("Determines if the player can reload this weapon when it is full of ammunition.")]
         [SerializeField]
-        private bool canReloadWhenFull = true;
+        private bool canReloadWhenFull = false;
 
         [Tooltip("Should this weapon be reloaded automatically after firing its last shot?")]
         [SerializeField]
@@ -258,6 +258,7 @@ namespace InfimaGames.LowPolyShooterPack
             //Max Out Ammo.
             ammunitionCurrent = magazineBehaviour.GetAmmunitionCurrent();
             ammoClipSize=ammunitionCurrent;
+            magazineBehaviour.SetClipSize(ammoClipSize);
 
             //Set ammo total
             ammoTotal=magazineBehaviour.GetAmmunitionTotal();
@@ -317,6 +318,8 @@ namespace InfimaGames.LowPolyShooterPack
         public override int GetAmmunitionCurrent() => ammunitionCurrent;
 
         public override int GetAmmunitionTotal() => magazineBehaviour.GetAmmunitionTotal();
+        public override int GetClipSize() => magazineBehaviour.GetClipSize();
+
         public override bool HasCycledReload() => cycledReload;
 
         public override bool IsAutomatic() => automatic;

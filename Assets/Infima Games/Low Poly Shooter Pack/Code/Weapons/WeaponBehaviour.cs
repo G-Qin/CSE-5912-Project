@@ -97,6 +97,11 @@ namespace InfimaGames.LowPolyShooterPack
         public abstract int GetAmmunitionTotal();
 
         /// <summary>
+        /// Returns Clip Size.
+        /// </summary>
+        public abstract int GetClipSize();
+
+        /// <summary>
         /// Determines if this Weapon reloads in cycles.
         /// </summary>
         public abstract bool HasCycledReload();
