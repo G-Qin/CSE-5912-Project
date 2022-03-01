@@ -1,4 +1,4 @@
-﻿// Copyright 2021, Infima Games. All Rights Reserved.
+// Copyright 2021, Infima Games. All Rights Reserved.
 
 using UnityEngine;
 using System.Globalization;
@@ -38,7 +38,7 @@ namespace InfimaGames.LowPolyShooterPack.Interface
             //Current Ammunition.
             float current = equippedWeapon.GetAmmunitionCurrent();
             //Total Ammunition.
-            float total = equippedWeapon.GetAmmunitionTotal();
+            float total = equippedWeapon.GetClipSize();
             
             //Update Text.
             textMesh.text = current.ToString(CultureInfo.InvariantCulture);

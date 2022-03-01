@@ -17,6 +17,16 @@ namespace InfimaGames.LowPolyShooterPack
         public abstract int GetAmmunitionTotal();
 
         /// <summary>
+        /// Returns The Clip Size.
+        /// </summary>
+        public abstract int GetClipSize();
+
+        /// <summary>
+        /// Sets The Clip Size.
+        /// </summary>
+        public abstract void SetClipSize(int amount);
+
+        /// <summary>
         /// Set The Total Ammunition.
         /// </summary>
         public abstract void SetAmmunitionTotal(int amount);

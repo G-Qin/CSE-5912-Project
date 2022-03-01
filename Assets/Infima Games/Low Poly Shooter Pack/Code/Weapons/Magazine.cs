@@ -17,9 +17,13 @@ namespace InfimaGames.LowPolyShooterPack
         [SerializeField]
         public int ammunitionTotal = 30;
 
-        [Tooltip("Total Ammunition.")]
+        [Tooltip("Current Ammunition.")]
         [SerializeField]
         private int ammunitionCurrent = 10;
+
+        [Tooltip("Clip Size.")]
+        [SerializeField]
+        private int clip = 10;
 
         [Header("Interface")]
 
@@ -35,6 +39,18 @@ namespace InfimaGames.LowPolyShooterPack
         /// Ammunition Total.
         /// </summary>
         public override int GetAmmunitionTotal() => ammunitionTotal;
+
+        /// <summary>
+        /// Ammunition Total.
+        /// </summary>
+        public override int GetClipSize() => clip;
+
+        /// <summary>
+        /// Set Clip Size.
+        /// </summary>
+        public override void SetClipSize(int amount){
+            clip=amount;
+        }
 
         /// <summary>
         /// Set Ammunition Total.
