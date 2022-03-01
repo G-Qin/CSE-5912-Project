@@ -17,6 +17,7 @@ public class follow : MonoBehaviour
         live = true;
         Player =GameObject.Find("/P_LPSP_FP_CH_1").transform;
         StartCoroutine("waiter");
+        enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
 
         //Player=GameObject.Find("/P_LPSP_FP_CH_1/SK_FP_CH_Default_Root/Armature/root/pelvis/spine_01/spine_02/spine_03/neck_01/head/SOCKET_Camera/Camera/Camera Depth");
