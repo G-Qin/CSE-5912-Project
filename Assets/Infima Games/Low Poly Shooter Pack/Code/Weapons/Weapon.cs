@@ -427,6 +427,13 @@ namespace InfimaGames.LowPolyShooterPack
             // Debug.Log("Current: "+ammoClipSize+"\n");     
             magazineBehaviour.SetAmmunitionTotal(ammoTotal);
         }
+
+        public override void RefillAmmunition(int num)
+        {
+            ammoTotal+=ammoClipSize*num;
+            magazineBehaviour.SetAmmunitionTotal(ammoTotal);
+        }
+
         public override void SetSlideBack(int back)
         {
             //Set the slide back bool.
@@ -439,6 +446,13 @@ namespace InfimaGames.LowPolyShooterPack
             //Spawn casing prefab at spawn point.
             if(prefabCasing != null && socketEjection != null)
                 Instantiate(prefabCasing, socketEjection.position, socketEjection.rotation);
+        }
+
+        public override void SetTotalAmmo()
+        {
+            ammoTotal+=ammoClipSize*3;
+            magazineBehaviour.SetAmmunitionTotal(ammoTotal);
+            Debug.Log(ammoTotal);
         }
 
         #endregion
