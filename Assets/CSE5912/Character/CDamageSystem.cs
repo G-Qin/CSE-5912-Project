@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CDamageSystem : MonoBehaviour
 {
-    private int weapomDamage = 15;
+    private int weaponDamage = 15;
 
     [SerializeField] private HealthSystem healthSystem;
 
@@ -12,11 +13,10 @@ public class CDamageSystem : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "EnemyWeapon")
         {
-            healthSystem.Damage(weapomDamage);
+            healthSystem.Damage(weaponDamage);
             if (healthSystem.getHealth() == 0)
             {
-                gameObject.SetActive(false);
-                Destroy(gameObject);
+                SceneManager.LoadScene("GameOverScene");
             }
         }
     }
