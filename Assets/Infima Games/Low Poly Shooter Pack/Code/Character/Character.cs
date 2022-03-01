@@ -1471,6 +1471,13 @@ namespace InfimaGames.LowPolyShooterPack
 				equippedWeapon.FillAmmunition(amount);
 		}
 		
+		public override void RefillAmmunition(int num)
+		{
+			//Refill ammo by clip num.
+			if(equippedWeapon != null)
+				equippedWeapon.RefillAmmunition(num);
+		}
+
 		public override void Grenade()
 		{
 			//Make sure that the grenade is valid, otherwise we'll get errors.

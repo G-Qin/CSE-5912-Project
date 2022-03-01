@@ -7,6 +7,7 @@ public class AmmoBox : MonoBehaviour
 {
     public bool inRange=false;
 
+    public Character character;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,7 @@ public class AmmoBox : MonoBehaviour
     {
         if (inRange)
         {
+            character.RefillAmmunition(4);
             Debug.Log("Refill");
         }
     }
