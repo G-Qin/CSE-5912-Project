@@ -93273,7 +93273,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 841204689}
-  - {fileID: 310868336}
   - {fileID: 2076246940}
   m_Father: {fileID: 0}
   m_RootOrder: 16
