@@ -214,8 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect_1: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c,
     type: 3}
-  hitEffect_2: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c,
-    type: 3}
+  hitEffect_2: {fileID: 100000, guid: bd1b09ecbf112814399e16be0e5243a9, type: 3}
 --- !u!1 &1231345400216816
 GameObject:
   m_ObjectHideFlags: 0
