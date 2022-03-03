@@ -127,15 +127,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Lock Cursor"",
-                    ""type"": ""Button"",
-                    ""id"": ""9beb2473-ee7d-4a54-857b-b42a64a66a65"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Inventory Next"",
                     ""type"": ""Button"",
                     ""id"": ""98c0547a-0a5e-484e-ba12-a7812face9b0"",
@@ -576,39 +567,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9837bdb8-e264-4c32-93bf-8013338f5c63"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Lock Cursor"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""84f67f9e-d7e6-4db3-8ca5-39f8f2727aa0"",
-                    ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Lock Cursor"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ac8aaf0e-baa6-466d-a2fd-5c3eb2bf85d7"",
-                    ""path"": ""<Gamepad>/start"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Lock Cursor"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""e2c127bc-a838-4782-a49c-063fa51f1d76"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
@@ -658,7 +616,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
         m_Player_Melee = m_Player.FindAction("Melee", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Inspect = m_Player.FindAction("Inspect", throwIfNotFound: true);
-        m_Player_LockCursor = m_Player.FindAction("Lock Cursor", throwIfNotFound: true);
         m_Player_InventoryNext = m_Player.FindAction("Inventory Next", throwIfNotFound: true);
         m_Player_InventoryNextWheel = m_Player.FindAction("Inventory Next Wheel", throwIfNotFound: true);
         m_Player_TimeSpeedUp = m_Player.FindAction("Time Speed Up", throwIfNotFound: true);
@@ -736,7 +693,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Melee;
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Inspect;
-    private readonly InputAction m_Player_LockCursor;
     private readonly InputAction m_Player_InventoryNext;
     private readonly InputAction m_Player_InventoryNextWheel;
     private readonly InputAction m_Player_TimeSpeedUp;
@@ -759,7 +715,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
         public InputAction @Melee => m_Wrapper.m_Player_Melee;
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Inspect => m_Wrapper.m_Player_Inspect;
-        public InputAction @LockCursor => m_Wrapper.m_Player_LockCursor;
         public InputAction @InventoryNext => m_Wrapper.m_Player_InventoryNext;
         public InputAction @InventoryNextWheel => m_Wrapper.m_Player_InventoryNextWheel;
         public InputAction @TimeSpeedUp => m_Wrapper.m_Player_TimeSpeedUp;
@@ -809,9 +764,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                 @Inspect.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInspect;
                 @Inspect.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInspect;
                 @Inspect.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInspect;
-                @LockCursor.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLockCursor;
-                @LockCursor.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLockCursor;
-                @LockCursor.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLockCursor;
                 @InventoryNext.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInventoryNext;
                 @InventoryNext.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInventoryNext;
                 @InventoryNext.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInventoryNext;
@@ -870,9 +822,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                 @Inspect.started += instance.OnInspect;
                 @Inspect.performed += instance.OnInspect;
                 @Inspect.canceled += instance.OnInspect;
-                @LockCursor.started += instance.OnLockCursor;
-                @LockCursor.performed += instance.OnLockCursor;
-                @LockCursor.canceled += instance.OnLockCursor;
                 @InventoryNext.started += instance.OnInventoryNext;
                 @InventoryNext.performed += instance.OnInventoryNext;
                 @InventoryNext.canceled += instance.OnInventoryNext;
@@ -911,7 +860,6 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
         void OnMelee(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnInspect(InputAction.CallbackContext context);
-        void OnLockCursor(InputAction.CallbackContext context);
         void OnInventoryNext(InputAction.CallbackContext context);
         void OnInventoryNextWheel(InputAction.CallbackContext context);
         void OnTimeSpeedUp(InputAction.CallbackContext context);
