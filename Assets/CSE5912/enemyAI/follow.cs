@@ -9,6 +9,7 @@ public class follow : MonoBehaviour
     public Animator anim;
     [SerializeField] private int bulletDamage;
     [SerializeField] private HealthSystem healthSystem;
+    private CoinSystem coin;
     private bool live;
     Collider m_Collider;
     void Start()
@@ -16,6 +17,7 @@ public class follow : MonoBehaviour
         anim = GetComponent<Animator>();
         live = true;
         Player =GameObject.Find("/P_LPSP_FP_CH_1").transform;
+        coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         StartCoroutine("waiter");
         m_Collider = GetComponent<Collider>();
 
@@ -65,8 +67,10 @@ public class follow : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
+            coin.addCoin(10);
             if (healthSystem.getHealth() == 0)
             {
+                coin.addCoin(100);
                 live = false;
                 enemy.enabled = false;
                 anim.SetBool("dead", true);
