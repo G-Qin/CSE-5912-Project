@@ -13,17 +13,23 @@ public class WeaponShop : MonoBehaviour
     [SerializeField]
     public GameObject Player;
 
+    [SerializeField]
+    public GameObject ShopTrigger;
+
     public static bool gamePaused = false;
+    private bool shopAvailable;
+
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
+        shopAvailable = ShopTrigger.GetComponent<WeaponShopTrigger>().shopAvailable;
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            if (gamePaused)
-                Resume();
-            else
+            if (!gamePaused && shopAvailable)
                 Pause();
+            else if(gamePaused)
+                Resume();
         }
     }
 
