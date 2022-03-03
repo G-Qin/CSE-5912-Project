@@ -16,10 +16,6 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         [Tooltip("Canvas prefab spawned at start. Displays the player's user interface.")]
         [SerializeField]
         private GameObject canvasPrefab;
-        
-        [Tooltip("Quality settings menu prefab spawned at start. Used for switching between different quality settings in-game.")]
-        [SerializeField]
-        private GameObject qualitySettingsPrefab;
 
         #endregion
 
@@ -32,8 +28,6 @@ namespace InfimaGames.LowPolyShooterPack.Interface
         {
             //Spawn Interface.
             Instantiate(canvasPrefab);
-            //Spawn Quality Settings Menu.
-            Instantiate(qualitySettingsPrefab);
         }
 
         #endregion
