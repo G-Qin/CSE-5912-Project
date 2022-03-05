@@ -97,6 +97,11 @@ namespace InfimaGames.LowPolyShooterPack
         public abstract int GetAmmunitionTotal();
 
         /// <summary>
+        /// Returns Clip Size.
+        /// </summary>
+        public abstract int GetClipSize();
+
+        /// <summary>
         /// Determines if this Weapon reloads in cycles.
         /// </summary>
         public abstract bool HasCycledReload();
@@ -192,6 +197,12 @@ namespace InfimaGames.LowPolyShooterPack
         /// Fills the character's equipped weapon's ammunition by a certain amount, or fully if set to -1.
         /// </summary>
         public abstract void FillAmmunition(int amount);
+
+        /// <summary>
+        /// Refill weapon by clip num.
+        /// </summary>
+        public abstract void RefillAmmunition(int num);
+
         /// <summary>
         /// Sets the slide back pose.
         /// </summary>
@@ -201,6 +212,11 @@ namespace InfimaGames.LowPolyShooterPack
         /// Ejects a casing from the weapon. This is commonly called from animation events, but can be called from anywhere.
         /// </summary>
         public abstract void EjectCasing();
+
+        /// <summary>
+        /// Sets total amount of ammo.
+        /// </summary>
+        public abstract void SetTotalAmmo();
 
         #endregion
     }

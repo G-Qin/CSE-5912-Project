@@ -210,7 +210,7 @@ namespace InfimaGames.LowPolyShooterPack
             stepClimb();
 
             //Jump.
-            rigidBody.AddForce((Vector3.down * 100), ForceMode.Acceleration);
+            rigidBody.AddForce((Vector3.down * 75), ForceMode.Acceleration);
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {
                 rigidBody.AddForce(new Vector3(0f, 100f, 0f) * jumpForce, ForceMode.Impulse);

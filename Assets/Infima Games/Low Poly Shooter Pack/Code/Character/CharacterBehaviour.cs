@@ -118,6 +118,11 @@ namespace InfimaGames.LowPolyShooterPack
         public abstract void FillAmmunition(int amount);
 
         /// <summary>
+        /// Refill ammunition of weapon
+        /// </summary>
+        public abstract void RefillAmmunition(int num);
+
+        /// <summary>
         /// Throws a grenade.
         /// </summary>
         public abstract void Grenade();
