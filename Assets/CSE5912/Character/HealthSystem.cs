@@ -28,11 +28,16 @@ using UnityEngine;
 
         public void Damage(int damageValue)
         {
-            health -= damageValue;
+            if (health > 0) {
+                health -= damageValue;
             
-        if (health < 0)
-            {
-                health = 0;
+                if (health <= 0)
+                {
+                    health = 0;
+                    if (gameObject.tag == "Enemy"){
+                        GameObject.Find("LevelManager").GetComponent<LevelManager>().EnemyDeath();
+                    }
+                }
             }
             healthbar.SetHealth(health);
             //Debug.Log("Damage: " + damageValue);
@@ -47,8 +52,6 @@ using UnityEngine;
                 health = maxHealth;
             }
         }
-
-
 
     }
 
