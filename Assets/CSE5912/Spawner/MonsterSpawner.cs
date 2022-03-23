@@ -15,8 +15,6 @@ public class MonsterSpawner : MonoBehaviour
     // testing variables
     private float time;
 
-    private int pos;
-
     void Start()
     {
         time = 0;
@@ -41,7 +39,7 @@ public class MonsterSpawner : MonoBehaviour
 
         // z position
         float z = 0;
-        monsterInstance = Instantiate(monster, new Vector3(pos, 0.5F, z), Quaternion.identity);
+        monsterInstance = Instantiate(monster, this.gameObject.transform.position, Quaternion.identity);
         z++;
         time = 0;
 
