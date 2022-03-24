@@ -9,7 +9,9 @@ public class ItemManager : MonoBehaviour
     AmmoBox ammo_script;
 
     private IA_Player input;
-
+    public GameObject HoldToFill;
+    public float startTime = 0f;
+    public float endTime = 0f;
     // check if in range of an interactable item
     bool ammoInRange = false;
 
@@ -39,15 +41,30 @@ public class ItemManager : MonoBehaviour
     void Update()
     {
         ammoInRange = ammo_script.inRange;
-
-        if (input.Player.Interact.triggered)
+        if(ammoInRange)
         {
-            // check if in range of ammo box
-            if(ammoInRange)
-            ammo_script.interaction();
+            HoldToFill.SetActive(true);
         }
-            //Debug.Log("Interact");
-    }
+        else
+        {
+            HoldToFill.SetActive(false);
+        }
 
-    
+        if (Input.GetKeyDown(KeyCode.E))
+        { 
+            startTime = Time.time;
+        }
+        if (Input.GetKeyUp(KeyCode.E))
+        { 
+            endTime = Time.time;
+            if(endTime-startTime>=2)
+            {
+                // check if in range of ammo box
+                if(ammoInRange)
+                ammo_script.interaction();
+            }
+            //Debug.Log("Interact");
+        }        
+        
+    }
 }
