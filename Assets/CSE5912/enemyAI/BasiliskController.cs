@@ -17,6 +17,7 @@ public class BasiliskController : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        FindObjectOfType<SoundManager>().Play("Ins");
         anim = gameObject.GetComponent<Animation>();
         live = true;
         Player = GameObject.Find("/P_LPSP_FP_CH_1").transform;
@@ -72,10 +73,10 @@ public class BasiliskController : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            coin.addCoin(10);
             if (healthSystem.getHealth() == 0)
             {
-                coin.addCoin(100);
+                FindObjectOfType<SoundManager>().Play("Ins1Die");
+                coin.addCoin(150);
                 live = false;
                 enemy.enabled = false;
                 anim.Play("Death1");
