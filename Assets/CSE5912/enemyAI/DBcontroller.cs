@@ -17,6 +17,7 @@ public class DBcontroller : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        FindObjectOfType<SoundManager>().Play("Ins2");
         anim = gameObject.GetComponent<Animation>();
         live = true;
         Player = GameObject.Find("/P_LPSP_FP_CH_1").transform;
@@ -61,10 +62,10 @@ public class DBcontroller : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            coin.addCoin(10);
             if (healthSystem.getHealth() == 0)
             {
-                coin.addCoin(100);
+                FindObjectOfType<SoundManager>().Play("Ins2Die");
+                coin.addCoin(50);
                 live = false;
                 enemy.enabled = false;
                 anim.Play("Death");
