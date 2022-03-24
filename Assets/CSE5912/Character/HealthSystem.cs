@@ -7,6 +7,9 @@ using UnityEngine;
         private int health;
         private int maxHealth;
         public HealthBar healthbar;
+
+        [SerializeField]
+        public HealthPack HealthPack;
         private void Awake()
         {
             maxHealth = 100;
@@ -50,6 +53,17 @@ using UnityEngine;
             if (health > maxHealth)
             {
                 health = maxHealth;
+            }
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.U) && gameObject.tag.Equals("Player") && HealthPack.GetHealthPackCount() > 0)
+            {
+                //Debug.Log("Healed 25!");
+                HealthPack.UseHealthPack();
+                Heal(25);
+                healthbar.SetHealth(health);
             }
         }
 
