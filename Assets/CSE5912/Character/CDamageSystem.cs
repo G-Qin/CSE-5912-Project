@@ -14,6 +14,7 @@ public class CDamageSystem : MonoBehaviour
         if (collisionInfo.collider.tag == "EnemyWeapon")
         {
             healthSystem.Damage(weaponDamage);
+            FindObjectOfType<SoundManager>().Play("CGetAttack");
             if (healthSystem.getHealth() == 0)
             {
                 SceneManager.LoadScene("GameOverScene");
