@@ -68,9 +68,9 @@ public class follow : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            coin.addCoin(10);
             if (healthSystem.getHealth() == 0)
             {
+                FindObjectOfType<SoundManager>().Play("GetAttack");
                 coin.addCoin(100);
                 live = false;
                 enemy.enabled = false;

@@ -28,8 +28,13 @@ public class CoinSystem : MonoBehaviour
         return coinNum;
     }
 
-    public void useCoin(int i)
+    public bool useCoin(int i)
     {
-        coinNum -= i;
+        if (coinNum >= i)
+        {
+            coinNum -= i;
+            return true;
+        }
+        return false;
     }
 }

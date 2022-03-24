@@ -144,7 +144,9 @@ namespace InfimaGames.LowPolyShooterPack
 		/// Last Time.time at which we shot.
 		/// </summary>
 		private float lastShotTime;
-		
+
+		private float axisLookValue = 1.0f;
+
 		/// <summary>
 		/// Overlay Layer Index. Useful for playing things like firing animations.
 		/// </summary>
@@ -1419,7 +1421,7 @@ namespace InfimaGames.LowPolyShooterPack
 		public void OnLook(InputAction.CallbackContext context)
 		{
 			//Read.
-			axisLook = cursorLocked ? context.ReadValue<Vector2>() : default;
+			axisLook = cursorLocked ? (context.ReadValue<Vector2>() * axisLookValue) : default;
 
 			//Make sure that we have a weapon.
 			if (equippedWeapon == null)
@@ -1437,10 +1439,15 @@ namespace InfimaGames.LowPolyShooterPack
 			axisLook *= aiming ? equippedWeaponScope.GetMultiplierMouseSensitivity() : 2.0f;
 		}
 
-		/// <summary>
-		/// Called in order to update the tutorial text value.
-		/// </summary>
-		public void OnUpdateTutorial(InputAction.CallbackContext context)
+		public void ChangeAxisLookVector(float value)
+        {
+			axisLookValue = value;
+        }
+
+        /// <summary>
+        /// Called in order to update the tutorial text value.
+        /// </summary>
+        public void OnUpdateTutorial(InputAction.CallbackContext context)
 		{
 			//Switch.
 			tutorialTextVisible = context switch
