@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class HealthPack : MonoBehaviour
 {
+    [SerializeField]
+    private CoinSystem CoinSystem;
+    [SerializeField]
+    private HealthSystem PlayerHealthSystem;
+
     private int healthPackCount;
 
     void Awake()
@@ -11,15 +16,20 @@ public class HealthPack : MonoBehaviour
         healthPackCount = 1;
     }
 
-    public void AddOneHealthPack()
+    public void BuyOneHealthPack()
     {
-        healthPackCount++;
+        bool success = CoinSystem.useCoin(500);
+        if(success)
+            healthPackCount++;
     }
 
     public void UseHealthPack()
     {
-        if (healthPackCount > 0)
+        if (healthPackCount > 0 && PlayerHealthSystem.getHealth() != 100)
+        {
             healthPackCount--;
+            gameObject.GetComponent<HealthPackEffect>().DoHealingEffect();
+        }
     }
 
     public int GetHealthPackCount()
