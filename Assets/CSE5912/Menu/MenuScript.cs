@@ -11,6 +11,15 @@ public class MenuScript : MonoBehaviour
     private GameObject OptionsCanvas;
 
     [SerializeField]
+    private GameObject QualityCanvas;
+
+    [SerializeField]
+    private GameObject SensitivityCanvas;
+
+    [SerializeField]
+    private GameObject AudioCanvas;
+
+    [SerializeField]
     public GameObject PlayerCamera;
 
     [SerializeField]
@@ -19,6 +28,9 @@ public class MenuScript : MonoBehaviour
     private bool gamePaused = false;
     private bool menuIsOpen = false;
     private bool optionIsOpen = false;
+    private bool qualityIsOpen = false;
+    private bool sensitivityIsOpen = false;
+    private bool audioIsOpen = false;
 
     // Update is called once per frame
     void Update()
@@ -85,6 +97,45 @@ public class MenuScript : MonoBehaviour
         }
     }
 
+    public void QualityOptions()
+    {
+        if (optionIsOpen)
+        {
+            OptionsCanvas.SetActive(false);
+            QualityCanvas.SetActive(true);
+
+            // Modify bool values
+            optionIsOpen = false;
+            qualityIsOpen = true;
+        }
+    }
+
+    public void SensitivityOptions()
+    {
+        if (optionIsOpen)
+        {
+            OptionsCanvas.SetActive(false);
+            SensitivityCanvas.SetActive(true);
+
+            // Modify bool values
+            optionIsOpen = false;
+            sensitivityIsOpen = true;
+        }
+    }
+
+    public void AudioOptions()
+    {
+        if (optionIsOpen)
+        {
+            OptionsCanvas.SetActive(false);
+            AudioCanvas.SetActive(true);
+
+            // Modify bool values
+            optionIsOpen = false;
+            audioIsOpen = true;
+        }
+    }
+
     public void BackToMainMenu()
     {
         if (optionIsOpen)
@@ -98,23 +149,47 @@ public class MenuScript : MonoBehaviour
         }
     }
 
+    public void QualityBackToOptions()
+    {
+        if (qualityIsOpen)
+        {
+            QualityCanvas.SetActive(false);
+            OptionsCanvas.SetActive(true);
+
+            // Modify bool values
+            optionIsOpen = true;
+            qualityIsOpen = false;
+        }
+    }
+
+    public void SensitivityBackToOptions()
+    {
+        if (sensitivityIsOpen)
+        {
+            SensitivityCanvas.SetActive(false);
+            OptionsCanvas.SetActive(true);
+
+            // Modify bool values
+            optionIsOpen = true;
+            sensitivityIsOpen = false;
+        }
+    }
+
+    public void AudioBackToOptions()
+    {
+        if (audioIsOpen)
+        {
+            AudioCanvas.SetActive(false);
+            OptionsCanvas.SetActive(true);
+
+            // Modify bool values
+            optionIsOpen = true;
+            audioIsOpen = false;
+        }
+    }
+
     public void ExitGame()
     {
         Application.Quit();
-    }
-
-    public void OptionTest1()
-    {
-        Debug.Log("Test 1 pressed!");
-    }
-
-    public void OptionTest2()
-    {
-        Debug.Log("Test 2 pressed!");
-    }
-
-    public void OptionTest3()
-    {
-        Debug.Log("Test 3 pressed!");
     }
 }
