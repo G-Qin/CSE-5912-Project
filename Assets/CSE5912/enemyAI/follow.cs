@@ -34,7 +34,7 @@ public class follow : MonoBehaviour
         if (live == true)
         {
             float dist = Vector3.Distance(Player.position, transform.position);
-            if (dist < 1)
+            if (dist < 1.5)
             {
                 enemy.ResetPath();
                 anim.SetBool("run", false);

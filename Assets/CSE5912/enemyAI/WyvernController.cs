@@ -16,6 +16,7 @@ public class WyvernController : MonoBehaviour
     private bool live;
     Collider m_Collider;
     public Transform attack;
+    public Transform eff;
     int att;
     void Start()
     {
@@ -64,7 +65,11 @@ public class WyvernController : MonoBehaviour
             {
                 enemy.ResetPath();
                 anim.Play("Whip tail");
-                yield return new WaitForSeconds(2.4f);
+                yield return new WaitForSeconds(1.1f);
+                Transform effect = Instantiate(eff, new Vector3(transform.GetChild(3).position.x,0, transform.GetChild(3).position.z), Quaternion.identity);
+                effect.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
+                yield return new WaitForSeconds(1.3f);
+                Destroy(effect.gameObject);
                 att = 0;
             }
             else
