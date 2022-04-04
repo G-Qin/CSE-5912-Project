@@ -19,6 +19,9 @@ TagManager:
   - Bullet
   - Enemy
   - EnemyWeapon
+  - EnemyWeapom
+  - WeaponShop
+  - FireRain
   layers:
   - Default
   - TransparentFX
