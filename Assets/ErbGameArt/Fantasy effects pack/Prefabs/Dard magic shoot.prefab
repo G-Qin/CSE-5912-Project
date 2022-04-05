@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199651663210896418}
   m_Layer: 0
   m_Name: SubSmoke
-  m_TagString: Untagged
+  m_TagString: DragonAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051822660742376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 1.393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14674,7 +14674,7 @@ GameObject:
   - component: {fileID: 199011252875170284}
   m_Layer: 0
   m_Name: Dard magic shoot
-  m_TagString: Untagged
+  m_TagString: DragonAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18519,11 +18519,11 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 1
+    collisionMessages: 0
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
     inside: 1
     outside: 0
@@ -18532,9 +18532,9 @@ ParticleSystem:
     colliderQueryMode: 0
     radiusScale: 1
     primitives:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 4322764023181168}
+    - {fileID: 4110324498713510}
+    - {fileID: 4984373924176138}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -19577,7 +19577,7 @@ GameObject:
   - component: {fileID: 199930220492708442}
   m_Layer: 0
   m_Name: Bats
-  m_TagString: Untagged
+  m_TagString: DragonAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
