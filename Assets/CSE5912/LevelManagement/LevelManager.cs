@@ -20,10 +20,23 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     List<GameObject> spawners = new List<GameObject>();
 
+    [SerializeField]
+    GameObject LevelPlaneWaypoint;
+
+    [SerializeField]
+    GameObject LevelPlaneWaypointText;
+
+    [SerializeField]
+    GameObject LevelPlane;
+
+    [SerializeField]
+    int TriggerLevelNum;
+
     private bool levelInProgress = false;
     private List<string> levelInfo = new List<string>();
     private int numOfEnemy = 0;
     private int levelInfoCounter = 1;
+    private bool planeIsTriggered = false;
     
     void Start()
     {
@@ -64,14 +77,17 @@ public class LevelManager : MonoBehaviour
 
     public void EnemyDeath(){
         numOfEnemy--;
-        Debug.Log(numOfEnemy);
+    }
+
+    public void TriggerPlane(){
+        planeIsTriggered = true;
     }
 
     void Update()
     {
         if (levelInProgress){
             // TO-DO: Check for spawner update
-            while (levelInfoCounter < levelInfo.Count){
+            while (levelInfoCounter < levelInfo.Count){ // Check end of file
                 int[] info = this.GetComponent<LevelReader>().ReadSpawnerInfo(levelInfo[levelInfoCounter]);
                 if (info[4] >= numOfEnemy){
                     int enemyType = info[0];
@@ -82,7 +98,7 @@ public class LevelManager : MonoBehaviour
                     spawners[spIndex].GetComponent<SpawnerManager>().monsterCount = enemyCount;
                     spawners[spIndex].GetComponent<SpawnerManager>().spawnInterval = interval;
                     spawners[spIndex].GetComponent<SpawnerManager>().SetupSpawner();
-                    levelInfoCounter++;
+                    levelInfoCounter++;  
                 } else {
                     break;
                 }
@@ -93,7 +109,18 @@ public class LevelManager : MonoBehaviour
                 if (levelNum == maxLevelNum){
                     // TO-DO: Full game complete
                     levelInProgress = false;
-                } else {
+                } else if (levelNum == TriggerLevelNum && !planeIsTriggered){
+                    LevelPlane.SetActive(false);
+                    LevelPlaneWaypoint.SetActive(true);
+                    LevelPlaneWaypointText.SetActive(true);
+                } else if (levelNum == TriggerLevelNum && planeIsTriggered){
+                    LevelPlane.SetActive(true);
+                    LevelPlane.transform.Rotate(0f, 0f, 180f, Space.Self);
+                    LevelPlaneWaypoint.SetActive(false);
+                    LevelPlaneWaypointText.SetActive(false);
+                    levelNum++;
+                    LoadLevel(levelNum);
+                } else if (levelNum != TriggerLevelNum || planeIsTriggered){
                     levelNum++;
                     LoadLevel(levelNum);
                 }
