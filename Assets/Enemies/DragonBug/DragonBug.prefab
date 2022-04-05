@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 150712962}
   m_Layer: 0
   m_Name: DragonBug
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 6969367113149920651}
+  HealthPack: {fileID: 0}
 --- !u!1 &160256
 GameObject:
   m_ObjectHideFlags: 0
