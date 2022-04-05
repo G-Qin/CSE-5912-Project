@@ -22,6 +22,8 @@ TagManager:
   - EnemyWeapom
   - WeaponShop
   - FireRain
+  - DragonBug
+  - DragonAttack
   layers:
   - Default
   - TransparentFX
