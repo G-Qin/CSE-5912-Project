@@ -681,9 +681,10 @@ GameObject:
   - component: {fileID: 1985769445}
   - component: {fileID: 1985769446}
   - component: {fileID: 150712962}
+  - component: {fileID: 7323001474413713113}
   m_Layer: 0
   m_Name: DragonBug
-  m_TagString: Enemy
+  m_TagString: DragonBug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,7 +757,7 @@ BoxCollider:
   m_GameObject: {fileID: 159612}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.2, z: -0.2}
@@ -814,6 +815,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 6969367113149920651}
   HealthPack: {fileID: 0}
+--- !u!65 &7323001474413713113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159612}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.5}
 --- !u!1 &160256
 GameObject:
   m_ObjectHideFlags: 0
