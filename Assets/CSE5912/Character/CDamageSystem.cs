@@ -47,6 +47,17 @@ public class CDamageSystem : MonoBehaviour
                 SceneManager.LoadScene("GameOverScene");
             }
         }
+
+        if (other.tag == "DragonAttack")
+        {
+            healthSystem.Damage(DragonDamage);
+            if (healthSystem.getHealth() == 0)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+        }
+
+
     }
 
         
@@ -62,7 +73,6 @@ public class CDamageSystem : MonoBehaviour
             {
                 if (timeRemaining <= 0)
                 {
-                    Debug.Log("Dragon 111111111");
                     healthSystem.Damage(DragonBugDamage);
                     if (healthSystem.getHealth() == 0)
                     {
@@ -72,6 +82,24 @@ public class CDamageSystem : MonoBehaviour
                 }
             }
         }
+
+/*        if (other.tag == "DragonAttack")
+        {
+
+            anim = other.transform.parent.gameObject.GetComponent<Animation>();
+            if (anim.IsPlaying("Bite"))
+            {
+                if (timeRemaining <= 0)
+                {
+                    healthSystem.Damage(DragonDamage);
+                    if (healthSystem.getHealth() == 0)
+                    {
+                        SceneManager.LoadScene("GameOverScene");
+                    }
+                    timeRemaining = 3f;
+                }
+            }
+        }*/
     }
 
     public float timeRemaining = 0;
@@ -83,17 +111,7 @@ public class CDamageSystem : MonoBehaviour
         }
     }
 
-    private void OnParticleCollision(GameObject collision)
-    {
-        if (collision.CompareTag("DragonDamage")) 
-        {
-            healthSystem.Damage(DragonDamage);
-            if (healthSystem.getHealth() == 0)
-            {
-                SceneManager.LoadScene("GameOverScene");
-            }
-        }
-    }
+    
 
 
 

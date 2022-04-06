@@ -8,6 +8,7 @@ public class WyvernController : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public Transform Player;
+    public HealthSystem PlayerHealth; // FT.
     public Animation anim;
     public float rotationSpeed = 10f;
     [SerializeField] private int bulletDamage;
@@ -24,6 +25,7 @@ public class WyvernController : MonoBehaviour
         anim = gameObject.GetComponent<Animation>();
         live = true;
         Player = GameObject.Find("/P_LPSP_FP_CH_1").transform;
+        PlayerHealth = Player.GetComponent<HealthSystem>(); // For test.
         coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         StartCoroutine("waiter");
         enemy.enabled = true;
@@ -58,8 +60,12 @@ public class WyvernController : MonoBehaviour
             {
                 enemy.ResetPath();
                 anim.Play("Bite");
+                if (dist < 1.5f) {
+                    PlayerHealth.Damage(10); // FT.
+                }
                 att++;
                 yield return new WaitForSeconds(2.0f);
+                
             }
             else if (att == 4 && dist < 3.0)
             {

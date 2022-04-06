@@ -3612,9 +3612,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -14672,6 +14672,7 @@ GameObject:
   - component: {fileID: 4110324498713510}
   - component: {fileID: 198054090994326888}
   - component: {fileID: 199011252875170284}
+  - component: {fileID: 2352533620688000689}
   m_Layer: 0
   m_Name: Dard magic shoot
   m_TagString: DragonAttack
@@ -18519,11 +18520,11 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 2
     inside: 1
     outside: 0
@@ -19564,6 +19565,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2352533620688000689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105111623985532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0f780737c0c2846a6b944e877ba433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1115302752399186
 GameObject:
   m_ObjectHideFlags: 0
