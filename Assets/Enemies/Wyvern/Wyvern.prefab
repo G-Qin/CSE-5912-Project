@@ -4116,6 +4116,7 @@ MonoBehaviour:
   rotationSpeed: 10
   bulletDamage: 20
   healthSystem: {fileID: 1005680134}
+  bossHealthbar: {fileID: 1407810765818816633}
   attack: {fileID: 4110324498713510, guid: d03268a4406450646bbcdef70ee8ea3d, type: 3}
   eff: {fileID: 4097324160096056, guid: fffb77091d2311b4bb70c69cbd77ef57, type: 3}
 --- !u!195 &1005680136
@@ -4205,7 +4206,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4476,7 +4477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6630303967552580023
 RectTransform:
   m_ObjectHideFlags: 0

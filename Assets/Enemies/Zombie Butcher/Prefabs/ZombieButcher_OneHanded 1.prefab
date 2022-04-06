@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.029957218, b: 0.029957218, a: 1}
+  m_Color: {r: 0, g: 0.90588236, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1226,6 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 173379488}
+  HealthPack: {fileID: 0}
 --- !u!82 &3186318325471110634
 AudioSource:
   m_ObjectHideFlags: 0
