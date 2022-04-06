@@ -32,11 +32,21 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     int TriggerLevelNum;
 
+    [SerializeField]
+    GameObject player;
+
+    [SerializeField]
+    GameObject ammobox;
+
+    [SerializeField]
+    GameObject toxicGas;
+
     private bool levelInProgress = false;
     private List<string> levelInfo = new List<string>();
     private int numOfEnemy = 0;
     private int levelInfoCounter = 1;
     private bool planeIsTriggered = false;
+    private float timeCounter=0;
     
     void Start()
     {
@@ -81,6 +91,8 @@ public class LevelManager : MonoBehaviour
 
     public void TriggerPlane(){
         planeIsTriggered = true;
+        ammobox.transform.position=new Vector3(173f,-7.8f,25f);
+        toxicGas.SetActive(false);
     }
 
     void Update()
@@ -113,6 +125,16 @@ public class LevelManager : MonoBehaviour
                     LevelPlane.SetActive(false);
                     LevelPlaneWaypoint.SetActive(true);
                     LevelPlaneWaypointText.SetActive(true);
+                    // start time counter to start sand storm
+                    timeCounter+=Time.deltaTime;
+                    // take damage every 5 seconds after 10 seconds of clearing level
+                    toxicGas.SetActive(true);
+                    if(timeCounter>10){
+                        if(timeCounter>15){
+                            timeCounter-=5;
+                            player.GetComponent<HealthSystem>().Damage(3);
+                        }
+                    }
                 } else if (levelNum == TriggerLevelNum && planeIsTriggered){
                     LevelPlane.SetActive(true);
                     LevelPlane.transform.Rotate(0f, 0f, 180f, Space.Self);
