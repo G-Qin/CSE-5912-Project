@@ -16,11 +16,12 @@ public class HealthSystem : MonoBehaviour
         //Debug.Log(100);
     }
 
-    //public HealthSystem(int maxHealth)
-    //{
-    //    this.maxHealth = maxHealth;
-    //    health = maxHealth;
-    //}
+    public void SetMaxHealth(int maxHealth)
+    {
+        this.maxHealth = maxHealth;
+        health = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
+    }
 
     public int getHealth()
     {

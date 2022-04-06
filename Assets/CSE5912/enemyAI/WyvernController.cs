@@ -13,6 +13,7 @@ public class WyvernController : MonoBehaviour
     public float rotationSpeed = 10f;
     [SerializeField] private int bulletDamage;
     [SerializeField] private HealthSystem healthSystem;
+ 
     private CoinSystem coin;
     private bool live;
     Collider m_Collider;
@@ -21,6 +22,10 @@ public class WyvernController : MonoBehaviour
     int att;
     void Start()
     {
+        healthSystem.SetMaxHealth(490);
+        GameObject abc = GameObject.Find("/Canvas/CHealthBar_1");
+        DisableHealthBar def = abc.GetComponent<DisableHealthBar>();
+        def.BossActive();
         FindObjectOfType<SoundManager>().Play("Ins2");
         anim = gameObject.GetComponent<Animation>();
         live = true;
