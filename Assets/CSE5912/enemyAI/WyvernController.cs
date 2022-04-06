@@ -22,7 +22,7 @@ public class WyvernController : MonoBehaviour
     int att;
     void Start()
     {
-        healthSystem.SetMaxHealth(490);
+        healthSystem.SetMaxHealth(1000);
         GameObject abc = GameObject.Find("/Canvas/CHealthBar_1");
         DisableHealthBar def = abc.GetComponent<DisableHealthBar>();
         def.BossActive();
@@ -65,9 +65,9 @@ public class WyvernController : MonoBehaviour
             {
                 enemy.ResetPath();
                 anim.Play("Bite");
-                if (dist < 1.5f) {
+/*                if (dist < 1.5f) {
                     PlayerHealth.Damage(10); // FT.
-                }
+                }*/
                 att++;
                 yield return new WaitForSeconds(2.0f);
                 
