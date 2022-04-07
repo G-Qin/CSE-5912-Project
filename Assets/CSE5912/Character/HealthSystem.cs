@@ -55,7 +55,7 @@ public class HealthSystem : MonoBehaviour
             if (health <= 0)
             {
                 health = 0;
-                if (gameObject.tag == "Enemy"){
+                if (gameObject.tag.Equals("Enemy") || gameObject.tag.Equals("DragonBug")){
                     GameObject.Find("LevelManager").GetComponent<LevelManager>().EnemyDeath();
                 }
             }

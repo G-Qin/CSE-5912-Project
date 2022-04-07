@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -116,11 +117,12 @@ public class LevelManager : MonoBehaviour
                 }
             }
 
-            // TO-DO: Check for level completion
+            // Check for level completion
             if (numOfEnemy <= 0){
                 if (levelNum == maxLevelNum){
-                    // TO-DO: Full game complete
+                    // Full game complete
                     levelInProgress = false;
+                    SceneManager.LoadScene("GameComplete");
                 } else if (levelNum == TriggerLevelNum && !planeIsTriggered){
                     LevelPlane.SetActive(false);
                     LevelPlaneWaypoint.SetActive(true);

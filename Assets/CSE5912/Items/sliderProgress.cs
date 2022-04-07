@@ -10,6 +10,9 @@ public class sliderProgress : MonoBehaviour
     public float gameTime;
 
     private bool isActive = false;
+    bool ammoInRange = false;
+    [SerializeField] private GameObject ammoBox;
+    AmmoBox ammo_script;
     void Start()
     {
         timeSlider.maxValue=gameTime;
@@ -19,7 +22,11 @@ public class sliderProgress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !isActive){
+        ammo_script = ammoBox.GetComponent<AmmoBox>();
+        ammoInRange = ammo_script.inRange;
+        if(ammoInRange)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && !isActive){
             timeSlider.gameObject.SetActive(true);
             timeSlider.value = 0;
             isActive = true;
@@ -38,6 +45,8 @@ public class sliderProgress : MonoBehaviour
             timeSlider.gameObject.SetActive(false);
             timeSlider.value = 0;
             isActive = false;
+        }
+
         }
     }
 }
