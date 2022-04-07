@@ -886,11 +886,19 @@ namespace InfimaGames.LowPolyShooterPack
 		}
 
 		/// <summary>
-		/// Update the cursor's status outside of this script
+		/// Update the cursor's status outside of this script.
 		/// </summary>
 		public void UpdateCursor()
         {
 			cursorLocked = !cursorLocked;
+        }
+
+		/// <summary>
+		/// Buy one grenade.
+		/// </summary>
+		public void AddGrenade()
+        {
+			grenadeCount++;
         }
 
 		#region ACTION CHECKS

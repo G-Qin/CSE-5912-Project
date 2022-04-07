@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
+    private bool ArmorBuffActive = false;
+    private bool DamageBuffActive = false;
+
     private int health;
     private int maxHealth;
     public HealthBar healthbar;
@@ -31,8 +34,24 @@ public class HealthSystem : MonoBehaviour
     public void Damage(int damageValue)
     {
         if (health > 0) {
-            health -= damageValue;
-            
+            // For player health system
+            if (gameObject.tag.Equals("Player"))
+            {
+                if (ArmorBuffActive)
+                    health -= damageValue / 2;
+                else
+                    health -= damageValue;
+            }
+
+            // For enemy health system
+            if (!gameObject.tag.Equals("Player"))
+            {
+                if (DamageBuffActive)
+                    health -= damageValue * 2;
+                else
+                    health -= damageValue;
+            }
+
             if (health <= 0)
             {
                 health = 0;
@@ -64,8 +83,33 @@ public class HealthSystem : MonoBehaviour
             Heal(25);
             healthbar.SetHealth(health);
         }
+        if(!gameObject.tag.Equals("Player"))
+            Debug.Log(DamageBuffActive);
     }
 
+    #region BUFF METHODS
+    public void ArmorBuffed()
+    {
+        if (gameObject.tag.Equals("Player"))
+            ArmorBuffActive = true;
+    }
+
+    public void ArmorUnBuffed()
+    {
+        ArmorBuffActive = false;
+    }
+
+    public void DamageBuffed()
+    {
+        if (!gameObject.tag.Equals("Player"))
+            DamageBuffActive = true;
+    }
+
+    public void DamageUnBuffed()
+    {
+        DamageBuffActive = false;
+    }
+    #endregion
 }
 
 
