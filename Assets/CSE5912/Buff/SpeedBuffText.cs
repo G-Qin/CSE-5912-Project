@@ -10,6 +10,6 @@ public class SpeedBuffText : MonoBehaviour
 
     private void Update()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().text = "× " + buffManager.getSpeedBuffRemain();
+        gameObject.GetComponent<TextMeshProUGUI>().text = buffManager.getSpeedBuffRemain().ToString();
     }
 }

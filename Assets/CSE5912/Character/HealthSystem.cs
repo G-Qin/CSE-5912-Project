@@ -47,7 +47,7 @@ public class HealthSystem : MonoBehaviour
             if (!gameObject.tag.Equals("Player"))
             {
                 if (DamageBuffActive)
-                    health -= damageValue * 2;
+                    health -= damageValue * 3 / 2;
                 else
                     health -= damageValue;
             }
@@ -83,8 +83,6 @@ public class HealthSystem : MonoBehaviour
             Heal(25);
             healthbar.SetHealth(health);
         }
-        if(!gameObject.tag.Equals("Player"))
-            Debug.Log(DamageBuffActive);
     }
 
     #region BUFF METHODS

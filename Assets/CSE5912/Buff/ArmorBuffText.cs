@@ -10,6 +10,6 @@ public class ArmorBuffText : MonoBehaviour
 
     private void Update()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().text = "× " + buffManager.getArmorBuffRemain();
+        gameObject.GetComponent<TextMeshProUGUI>().text = buffManager.getArmorBuffRemain().ToString();
     }
 }

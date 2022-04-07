@@ -10,6 +10,6 @@ public class DamageBuffText : MonoBehaviour
 
     private void Update()
     {
-        gameObject.GetComponent<TextMeshProUGUI>().text = "× " + buffManager.getDamageBuffRemain();
+        gameObject.GetComponent<TextMeshProUGUI>().text = buffManager.getDamageBuffRemain().ToString();
     }
 }
