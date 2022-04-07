@@ -40,6 +40,9 @@ public class LevelManager : MonoBehaviour
     GameObject ammobox;
 
     [SerializeField]
+    GameObject shop;
+
+    [SerializeField]
     GameObject toxicGas;
 
     private bool levelInProgress = false;
@@ -93,6 +96,9 @@ public class LevelManager : MonoBehaviour
     public void TriggerPlane(){
         planeIsTriggered = true;
         ammobox.transform.position=new Vector3(173f,-7.8f,25f);
+        shop.transform.position=new Vector3(165.76f,-5.27f,21f);
+        shop.transform.Rotate(0,30,0,Space.Self);
+
         toxicGas.SetActive(false);
     }
 
