@@ -27,26 +27,31 @@ public class sliderProgress : MonoBehaviour
         if(ammoInRange)
         {
             if (Input.GetKeyDown(KeyCode.E) && !isActive){
-            timeSlider.gameObject.SetActive(true);
-            timeSlider.value = 0;
-            isActive = true;
-        }
-
-        if (Input.GetKey(KeyCode.E)&& isActive)
-        { 
-            timeSlider.value += Time.deltaTime;
-            if (timeSlider.value >= gameTime){
-                isActive = false;
+                timeSlider.gameObject.SetActive(true);
+                timeSlider.value = 0;
+                isActive = true;
+            }   
+            if (Input.GetKey(KeyCode.E) && isActive)
+            { 
+                timeSlider.value += Time.deltaTime;
+                if (timeSlider.value >= gameTime){
+                    isActive = false;
+                    timeSlider.gameObject.SetActive(false);
+                }
+            } 
+            if (Input.GetKeyUp(KeyCode.E) && isActive) 
+            { 
                 timeSlider.gameObject.SetActive(false);
+                timeSlider.value = 0;
+                isActive = false;
             }
-        } 
-        if (Input.GetKeyUp(KeyCode.E) && isActive)
-        { 
+        } else if (!ammoInRange && isActive){
             timeSlider.gameObject.SetActive(false);
             timeSlider.value = 0;
             isActive = false;
         }
 
-        }
+
+        
     }
 }
