@@ -45,6 +45,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     GameObject toxicGas;
 
+    [SerializeField]
+    GameObject areaSwitchText;
+
     private bool levelInProgress = false;
     private List<string> levelInfo = new List<string>();
     private int numOfEnemy = 0;
@@ -133,6 +136,7 @@ public class LevelManager : MonoBehaviour
                     LevelPlane.SetActive(false);
                     LevelPlaneWaypoint.SetActive(true);
                     LevelPlaneWaypointText.SetActive(true);
+                    areaSwitchText.SetActive(true);
                     // start time counter to start sand storm
                     timeCounter+=Time.deltaTime;
                     // take damage every 5 seconds after 10 seconds of clearing level
@@ -148,6 +152,7 @@ public class LevelManager : MonoBehaviour
                     LevelPlane.transform.Rotate(0f, 0f, 180f, Space.Self);
                     LevelPlaneWaypoint.SetActive(false);
                     LevelPlaneWaypointText.SetActive(false);
+                    areaSwitchText.SetActive(false);
                     levelNum++;
                     LoadLevel(levelNum);
                 } else if (levelNum != TriggerLevelNum || planeIsTriggered){
