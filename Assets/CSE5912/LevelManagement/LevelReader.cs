@@ -7,7 +7,6 @@ using UnityEngine;
 public class LevelReader : MonoBehaviour
 {
     public string[] ReadLevel(int levelNum){
-        Debug.Log("Reading level" + levelNum);
         string filename = "Level" + levelNum + ".txt";
 
         string[] lines = File.ReadAllLines(@"Assets\CSE5912\LevelManagement\Levels\" + filename);
