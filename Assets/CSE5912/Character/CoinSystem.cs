@@ -15,7 +15,7 @@ public class CoinSystem : MonoBehaviour
 
     private void LateUpdate()
     {
-        text.text = ": " + coinNum;
+        text.text = coinNum.ToString();
     }
 
     public void addCoin(int coins)
