@@ -79,6 +79,8 @@ public class BasiliskController : MonoBehaviour
                 coin.addCoin(150);
                 live = false;
                 enemy.enabled = false;
+                GetComponent<Rigidbody>().detectCollisions = false;
+                m_Collider.enabled = !m_Collider.enabled;
                 anim.Play("Death1");
                 //StartCoroutine("waiter");
                 //gameObject.SetActive(false);

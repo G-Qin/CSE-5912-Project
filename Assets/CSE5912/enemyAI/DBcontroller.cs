@@ -68,6 +68,8 @@ public class DBcontroller : MonoBehaviour
                 coin.addCoin(50);
                 live = false;
                 enemy.enabled = false;
+                GetComponent<Rigidbody>().detectCollisions = false;
+                m_Collider.enabled = !m_Collider.enabled;
                 anim.Play("Death");
                 //StartCoroutine("waiter");
                 //gameObject.SetActive(false);
