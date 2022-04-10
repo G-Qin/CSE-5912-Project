@@ -61,6 +61,8 @@ public class NerdController : MonoBehaviour
                 coin.addCoin(100);
                 live = false;
                 enemy.enabled = false;
+                GetComponent<Rigidbody>().detectCollisions = false;
+                m_Collider.enabled = !m_Collider.enabled;
                 anim.SetBool("dead", true);
                 //StartCoroutine("waiter");
                 //gameObject.SetActive(false);
