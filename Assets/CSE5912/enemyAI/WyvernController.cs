@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class WyvernController : MonoBehaviour
 {
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public HealthSystem PlayerHealth; // FT.
@@ -22,6 +23,7 @@ public class WyvernController : MonoBehaviour
     int att;
     void Start()
     {
+        alive = true;
         healthSystem.SetMaxHealth(1000);
         GameObject abc = GameObject.Find("/Canvas/CHealthBar_1");
         DisableHealthBar def = abc.GetComponent<DisableHealthBar>();
@@ -107,8 +109,9 @@ public class WyvernController : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
+            if (healthSystem.getHealth() == 0 && alive)
             {
+                alive = false;
                 FindObjectOfType<SoundManager>().Play("Ins2Die");
                 coin.addCoin(50);
                 live = false;

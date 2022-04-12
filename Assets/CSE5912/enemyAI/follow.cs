@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class follow : MonoBehaviour
 {
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Animator anim;
@@ -14,6 +15,7 @@ public class follow : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         anim = GetComponent<Animator>();
         live = true;
         Player =GameObject.Find("/P_LPSP_FP_CH_1").transform;
@@ -68,8 +70,9 @@ public class follow : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
+            if (healthSystem.getHealth() == 0 && alive)
             {
+                alive = false;
                 FindObjectOfType<SoundManager>().Play("GetAttack");
                 coin.addCoin(100);
                 live = false;
