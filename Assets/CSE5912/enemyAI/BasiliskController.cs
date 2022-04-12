@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class BasiliskController : MonoBehaviour
 {
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Transform attack;
@@ -17,6 +18,7 @@ public class BasiliskController : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         FindObjectOfType<SoundManager>().Play("Ins");
         anim = gameObject.GetComponent<Animation>();
         live = true;
@@ -72,9 +74,11 @@ public class BasiliskController : MonoBehaviour
         //Debug.Log("Hit!!" + collisionInfo.collider.tag);
         if (collisionInfo.collider.tag == "Bullet")
         {
+            
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
+            if (healthSystem.getHealth() == 0 && alive)
             {
+                alive = false;
                 FindObjectOfType<SoundManager>().Play("Ins1Die");
                 coin.addCoin(150);
                 live = false;

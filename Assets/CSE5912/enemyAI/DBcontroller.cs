@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class DBcontroller : MonoBehaviour
 {
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Animation anim;
@@ -17,6 +18,7 @@ public class DBcontroller : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         FindObjectOfType<SoundManager>().Play("Ins2");
         anim = gameObject.GetComponent<Animation>();
         live = true;
@@ -62,8 +64,9 @@ public class DBcontroller : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
+            if (healthSystem.getHealth() == 0 && alive)
             {
+                alive = false;
                 FindObjectOfType<SoundManager>().Play("Ins2Die");
                 coin.addCoin(50);
                 live = false;
