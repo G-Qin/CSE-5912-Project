@@ -466,24 +466,7 @@ MonoBehaviour:
 
     Grenade:
 
-    - G key to throw a grenade.
-
-
-    Timescale:
-
-    -
-    5 key to freeze/unfreeze time.
-
-    - 8 key to decrease timescale.
-
-    - 9 key
-    to increase timescale.
-
-
-    Quality Settings:
-
-    - P key to open quality settings
-    menu.'
+    - G key to throw a grenade.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52822dc6e80b18c4b84fa37fb0a9018f, type: 2}
   m_sharedMaterial: {fileID: -5066701443530399222, guid: 52822dc6e80b18c4b84fa37fb0a9018f,
