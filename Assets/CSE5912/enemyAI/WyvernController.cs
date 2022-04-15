@@ -46,6 +46,19 @@ public class WyvernController : MonoBehaviour
         Vector3 direction = new Vector3(Player.position.x - transform.GetChild(3).position.x,0.0f, Player.position.z - transform.GetChild(3).position.z).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+        if (healthSystem.getHealth() == 0 && alive)
+        {
+            alive = false;
+            FindObjectOfType<SoundManager>().Play("Ins2Die");
+            coin.addCoin(50);
+            live = false;
+            enemy.enabled = false;
+            anim.Play("Death");
+            //StartCoroutine("waiter");
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            Destroy(gameObject, 3.0f);
+        }
     }
     IEnumerator waiter()
     {
@@ -109,19 +122,7 @@ public class WyvernController : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0 && alive)
-            {
-                alive = false;
-                FindObjectOfType<SoundManager>().Play("Ins2Die");
-                coin.addCoin(50);
-                live = false;
-                enemy.enabled = false;
-                anim.Play("Death");
-                //StartCoroutine("waiter");
-                //gameObject.SetActive(false);
-                //Destroy(gameObject);
-                Destroy(gameObject, 3.0f);
-            }
+           
         }
 
     }

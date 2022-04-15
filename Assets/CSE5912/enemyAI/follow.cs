@@ -30,6 +30,25 @@ public class follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (healthSystem.getHealth() <= 0 && alive)
+        {
+            alive = false;
+            FindObjectOfType<SoundManager>().Play("GetAttack");
+            coin.addCoin(100);
+            live = false;
+            enemy.enabled = false;
+            GetComponent<Rigidbody>().detectCollisions = false;
+            m_Collider.enabled = !m_Collider.enabled;
+            anim.SetBool("dead", true);
+            //StartCoroutine("waiter");
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            Destroy(gameObject, 3.0f);
+        }
+        else
+        {
+            anim.SetBool("dead", false);
+        }
     }
     IEnumerator waiter()
     {
@@ -70,25 +89,7 @@ public class follow : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0 && alive)
-            {
-                alive = false;
-                FindObjectOfType<SoundManager>().Play("GetAttack");
-                coin.addCoin(100);
-                live = false;
-                enemy.enabled = false;
-                GetComponent<Rigidbody>().detectCollisions = false;
-                m_Collider.enabled = !m_Collider.enabled;
-                anim.SetBool("dead", true);
-                //StartCoroutine("waiter");
-                //gameObject.SetActive(false);
-                //Destroy(gameObject);
-                Destroy(gameObject, 3.0f);
-            }
-            else
-            {
-                anim.SetBool("dead", false);
-            }
+            
         }
 
     }

@@ -689,7 +689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &412232
 Transform:
   m_ObjectHideFlags: 0
@@ -776,6 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91531d0beabfb2249a26a32da7e4d0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alive: 0
   enemy: {fileID: 1985769446}
   Player: {fileID: 0}
   anim: {fileID: 11181360}
@@ -816,7 +817,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf995d01d12c3146ae9e810bb54acfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   healthbar: {fileID: 6969367113149920651}
+  hitCrosshair: {fileID: 0}
+  canvas: {fileID: 0}
   HealthPack: {fileID: 0}
 --- !u!65 &7323001474413713113
 BoxCollider:
