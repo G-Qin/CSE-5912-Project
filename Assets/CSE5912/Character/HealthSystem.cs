@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -8,9 +9,18 @@ public class HealthSystem : MonoBehaviour
     private int health;
     private int maxHealth;
     public HealthBar healthbar;
+    public GameObject hitCrosshair;
+    public GameObject canvas;
 
     [SerializeField]
     public HealthPack HealthPack;
+
+    void Start(){
+        if (!gameObject.tag.Equals("Player")){
+            hitCrosshair = GameObject.Find("/Canvas/BulletHitCrosshair");
+        }
+    }
+
     private void Awake()
     {
         maxHealth = 100;
@@ -46,6 +56,8 @@ public class HealthSystem : MonoBehaviour
             // For enemy health system
             if (!gameObject.tag.Equals("Player"))
             {
+                hitCrosshair.GetComponent<HitCrosshairScript>().EnableHitCrosshair();
+                StartCoroutine(WaitToDisableHC());
                 if (DamageBuffActive)
                     health -= damageValue * 3 / 2;
                 else
@@ -57,6 +69,7 @@ public class HealthSystem : MonoBehaviour
                 health = 0;
                 if (gameObject.tag.Equals("Enemy") || gameObject.tag.Equals("DragonBug")){
                     GameObject.Find("LevelManager").GetComponent<LevelManager>().EnemyDeath();
+                    FindObjectOfType<SoundManager>().Play("EnemyKillSound");
                 }
             }
         }
@@ -108,6 +121,11 @@ public class HealthSystem : MonoBehaviour
         DamageBuffActive = false;
     }
     #endregion
+
+    IEnumerator WaitToDisableHC(){
+        yield return new WaitForSeconds(0.5f);
+        hitCrosshair.GetComponent<HitCrosshairScript>().DisableHitCrosshair();
+    }
 }
 
 
