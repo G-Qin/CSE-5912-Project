@@ -205,7 +205,7 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 					//Toggle the isHit bool on the target object
 					hit.gameObject.GetComponent<TargetScript>().isHit = true;
 				}
-				if (hit.GetComponent<Collider>().tag == "Enemy")
+				if (hit.GetComponent<Collider>().tag == "Enemy" || hit.GetComponent<Collider>().tag == "DragonBug")
 				{
 					//Toggle "explode" on explosive barrel object
 					hit.gameObject.GetComponent<HealthSystem>().Damage(100);
