@@ -30,7 +30,7 @@ public class follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (healthSystem.getHealth() <= 0 && alive)
+        if (healthSystem.getHealth() <= 0 && live)
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("GetAttack");

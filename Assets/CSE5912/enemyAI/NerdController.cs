@@ -28,7 +28,7 @@ public class NerdController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (healthSystem.getHealth() <= 0 && alive)
+        if (healthSystem.getHealth() <= 0 && live)
         {
             FindObjectOfType<SoundManager>().Play("GetAttack");
             coin.addCoin(100);

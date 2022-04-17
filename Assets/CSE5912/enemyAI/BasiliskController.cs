@@ -37,7 +37,7 @@ public class BasiliskController : MonoBehaviour
         Vector3 direction = (Player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
-        if (healthSystem.getHealth() == 0 && alive)
+        if (healthSystem.getHealth() == 0 && live)
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("Ins1Die");

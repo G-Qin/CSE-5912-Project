@@ -46,7 +46,7 @@ public class WyvernController : MonoBehaviour
         Vector3 direction = new Vector3(Player.position.x - transform.GetChild(3).position.x,0.0f, Player.position.z - transform.GetChild(3).position.z).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
-        if (healthSystem.getHealth() == 0 && alive)
+        if (healthSystem.getHealth() == 0 && live)
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("Ins2Die");
