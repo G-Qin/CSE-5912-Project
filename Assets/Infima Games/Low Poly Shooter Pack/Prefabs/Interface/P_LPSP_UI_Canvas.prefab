@@ -427,7 +427,6 @@ MonoBehaviour:
   m_text: 'Controls
 
 
-
     Movement:
 
     - Mouse to look around.
@@ -456,17 +455,28 @@ MonoBehaviour:
     Q/scrollwheel key to cycle equipped weapons.
 
 
-
     Melee:
 
     - F key to use
     knife attack.
 
 
-
     Grenade:
 
-    - G key to throw a grenade.'
+    - G key to throw a grenade.
+
+
+    Buffs:
+
+    -
+    '';'' key to use speed buff
+
+    - ''['' key to use armor buff
+
+    - '']'' key
+    to use damage buff
+
+    - U key to use health pack'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52822dc6e80b18c4b84fa37fb0a9018f, type: 2}
   m_sharedMaterial: {fileID: -5066701443530399222, guid: 52822dc6e80b18c4b84fa37fb0a9018f,
@@ -494,8 +504,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
