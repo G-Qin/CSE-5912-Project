@@ -17,12 +17,12 @@ public class HealthPackText : MonoBehaviour
         HealthPack = Player.GetComponent<HealthPack>();
         text = GetComponent<Text>();
         healthPackCount = HealthPack.GetHealthPackCount();
-        text.text = "Health Pack: " + healthPackCount;
+        text.text = healthPackCount.ToString();
     }
 
     void Update()
     {
         healthPackCount = HealthPack.GetHealthPackCount();
-        text.text = "Health Pack: " + healthPackCount;
+        text.text = healthPackCount.ToString();
     }
 }

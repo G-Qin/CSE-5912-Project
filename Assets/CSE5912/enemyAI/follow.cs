@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class follow : MonoBehaviour
 {
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Animator anim;
@@ -14,6 +15,7 @@ public class follow : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         anim = GetComponent<Animator>();
         live = true;
         Player =GameObject.Find("/P_LPSP_FP_CH_1").transform;
@@ -28,13 +30,32 @@ public class follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (healthSystem.getHealth() <= 0 && live)
+        {
+            alive = false;
+            FindObjectOfType<SoundManager>().Play("GetAttack");
+            coin.addCoin(100);
+            live = false;
+            enemy.enabled = false;
+            GetComponent<Rigidbody>().detectCollisions = false;
+            m_Collider.enabled = !m_Collider.enabled;
+            anim.SetBool("dead", true);
+            //StartCoroutine("waiter");
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            Destroy(gameObject, 3.0f);
+        }
+        else
+        {
+            anim.SetBool("dead", false);
+        }
     }
     IEnumerator waiter()
     {
         if (live == true)
         {
             float dist = Vector3.Distance(Player.position, transform.position);
-            if (dist < 1)
+            if (dist < 1.5)
             {
                 enemy.ResetPath();
                 anim.SetBool("run", false);
@@ -68,22 +89,7 @@ public class follow : MonoBehaviour
         if (collisionInfo.collider.tag == "Bullet")
         {
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
-            {
-                FindObjectOfType<SoundManager>().Play("GetAttack");
-                coin.addCoin(100);
-                live = false;
-                enemy.enabled = false;
-                anim.SetBool("dead", true);
-                //StartCoroutine("waiter");
-                //gameObject.SetActive(false);
-                //Destroy(gameObject);
-                Destroy(gameObject, 3.0f);
-            }
-            else
-            {
-                anim.SetBool("dead", false);
-            }
+            
         }
 
     }

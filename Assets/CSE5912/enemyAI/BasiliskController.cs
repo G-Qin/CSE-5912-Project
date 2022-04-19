@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class BasiliskController : MonoBehaviour
 {
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Transform attack;
@@ -17,6 +18,7 @@ public class BasiliskController : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         FindObjectOfType<SoundManager>().Play("Ins");
         anim = gameObject.GetComponent<Animation>();
         live = true;
@@ -35,6 +37,21 @@ public class BasiliskController : MonoBehaviour
         Vector3 direction = (Player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+        if (healthSystem.getHealth() == 0 && live)
+        {
+            alive = false;
+            FindObjectOfType<SoundManager>().Play("Ins1Die");
+            coin.addCoin(150);
+            live = false;
+            enemy.enabled = false;
+            GetComponent<Rigidbody>().detectCollisions = false;
+            m_Collider.enabled = !m_Collider.enabled;
+            anim.Play("Death1");
+            //StartCoroutine("waiter");
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            Destroy(gameObject, 3.0f);
+        }
     }
     IEnumerator waiter()
     {
@@ -72,19 +89,9 @@ public class BasiliskController : MonoBehaviour
         //Debug.Log("Hit!!" + collisionInfo.collider.tag);
         if (collisionInfo.collider.tag == "Bullet")
         {
+            
             healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
-            {
-                FindObjectOfType<SoundManager>().Play("Ins1Die");
-                coin.addCoin(150);
-                live = false;
-                enemy.enabled = false;
-                anim.Play("Death1");
-                //StartCoroutine("waiter");
-                //gameObject.SetActive(false);
-                //Destroy(gameObject);
-                Destroy(gameObject, 3.0f);
-            }
+            
         }
 
     }

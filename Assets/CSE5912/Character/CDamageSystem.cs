@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class CDamageSystem : MonoBehaviour
 {
-    private int weaponDamage = 15;
+    public Animation anim;
+    private int weaponDamage = 19;
+    private int fireRain = 5;
+    private int DragonBugDamage = 10;
+    private int DragonDamage = 25;
 
     [SerializeField] private HealthSystem healthSystem;
 
@@ -19,5 +23,96 @@ public class CDamageSystem : MonoBehaviour
                 SceneManager.LoadScene("GameOverScene");
             }
         }
+        /*        if (collisionInfo.collider.tag == "DragonBug")
+                {
+                    anim = collisionInfo.collider.gameObject.GetComponent<Animation>();
+                    if (anim.IsPlaying("Attack1"))
+                    {
+                        healthSystem.Damage(DragonBugDamage);
+                        if (healthSystem.getHealth() == 0)
+                        {
+                            SceneManager.LoadScene("GameOverScene");
+                        }
+                    }
+                }*/
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "FireRain")
+        {
+            healthSystem.Damage(fireRain);
+            if (healthSystem.getHealth() == 0)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+        }
+
+        if (other.tag == "DragonAttack")
+        {
+            healthSystem.Damage(DragonDamage);
+            if (healthSystem.getHealth() == 0)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+        }
+
+
+    }
+
+        
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        if (other.tag == "DragonBug")
+        {
+                
+            anim = other.gameObject.GetComponent<Animation>();
+            if (anim.IsPlaying("Attack1"))
+            {
+                if (timeRemaining <= 0)
+                {
+                    healthSystem.Damage(DragonBugDamage);
+                    if (healthSystem.getHealth() == 0)
+                    {
+                        SceneManager.LoadScene("GameOverScene");
+                    }
+                    timeRemaining = 1.3f;
+                }
+            }
+        }
+
+/*        if (other.tag == "DragonAttack")
+        {
+
+            anim = other.transform.parent.gameObject.GetComponent<Animation>();
+            if (anim.IsPlaying("Bite"))
+            {
+                if (timeRemaining <= 0)
+                {
+                    healthSystem.Damage(DragonDamage);
+                    if (healthSystem.getHealth() == 0)
+                    {
+                        SceneManager.LoadScene("GameOverScene");
+                    }
+                    timeRemaining = 3f;
+                }
+            }
+        }*/
+    }
+
+    public float timeRemaining = 0;
+    void Update()
+    {
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+    }
+
+    
+
+
+
 }
