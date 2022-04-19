@@ -57,7 +57,7 @@ public class ItemManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E))
         { 
             endTime = Time.time;
-            if(endTime-startTime>=2)
+            if(endTime-startTime>=1)
             {
                 // check if in range of ammo box
                 if(ammoInRange)
