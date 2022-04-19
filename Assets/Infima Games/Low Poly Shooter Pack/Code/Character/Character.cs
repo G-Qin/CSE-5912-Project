@@ -123,6 +123,9 @@ namespace InfimaGames.LowPolyShooterPack
 
 		#region FIELDS
 
+		[SerializeField]
+		private BulletDamageSystem bulletDamageSystem;
+
 		/// <summary>
 		/// True if the character is aiming.
 		/// </summary>
@@ -444,6 +447,9 @@ namespace InfimaGames.LowPolyShooterPack
 			
 			//Save Aiming Value.
 			wasAiming = aiming;
+
+			//For check number;
+			bulletDamageSystem.setBulletDamage(inventory.GetEquippedIndex());
 		}
 
 		protected override void LateUpdate()
