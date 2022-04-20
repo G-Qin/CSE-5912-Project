@@ -24,6 +24,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// <summary>
         /// Currently equipped index.
         /// </summary>
+        [SerializeField]
         private int equippedIndex = -1;
 
         #endregion

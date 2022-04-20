@@ -1397,7 +1397,7 @@ namespace InfimaGames.LowPolyShooterPack
 					//Get the next index to switch to.
 					int indexNext = scrollValue > 0 ? inventory.GetNextIndex() : inventory.GetLastIndex();
 					//Get the current weapon's index.
-					int indexCurrent = inventory.GetEquippedIndex();
+					int indexCurrent = available.IndexOf(inventory.GetEquippedIndex());
 					
 					//Make sure we're allowed to change, and also that we're not using the same index, otherwise weird things happen!
 					if (CanChangeWeapon() && (indexCurrent != indexNext))
