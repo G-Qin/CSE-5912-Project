@@ -23,7 +23,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Awake()
     {
-        maxHealth = 100;
+        maxHealth = 100000;
         health = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
         //Debug.Log(100);
