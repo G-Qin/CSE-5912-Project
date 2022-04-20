@@ -39,7 +39,7 @@ public class DBcontroller : MonoBehaviour
         if (healthSystem.getHealth() == 0 && live)
         {
             alive = false;
-            FindObjectOfType<SoundManager>().Play("Ins2Die");
+            //FindObjectOfType<SoundManager>().Play("Ins2Die");
             coin.addCoin(125);
             live = false;
             enemy.enabled = false;

@@ -33,7 +33,7 @@ public class NerdController : MonoBehaviour
     {
         if (healthSystem.getHealth() <= 0 && live)
         {
-            FindObjectOfType<SoundManager>().Play("GetAttack");
+            //FindObjectOfType<SoundManager>().Play("GetAttack");
             coin.addCoin(100);
             live = false;
             enemy.enabled = false;

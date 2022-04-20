@@ -34,7 +34,7 @@ public class follow : MonoBehaviour
         if (healthSystem.getHealth() <= 0 && live)
         {
             alive = false;
-            FindObjectOfType<SoundManager>().Play("GetAttack");
+            //FindObjectOfType<SoundManager>().Play("GetAttack");
             coin.addCoin(200);
             live = false;
             enemy.enabled = false;

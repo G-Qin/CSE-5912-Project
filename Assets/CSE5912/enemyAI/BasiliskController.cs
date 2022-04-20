@@ -41,7 +41,7 @@ public class BasiliskController : MonoBehaviour
         if (healthSystem.getHealth() == 0 && live)
         {
             alive = false;
-            FindObjectOfType<SoundManager>().Play("Ins1Die");
+            //FindObjectOfType<SoundManager>().Play("Ins1Die");
             coin.addCoin(300);
             live = false;
             enemy.enabled = false;
