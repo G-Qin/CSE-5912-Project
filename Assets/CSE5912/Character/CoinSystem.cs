@@ -10,7 +10,7 @@ public class CoinSystem : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
-        coinNum = 1000;
+        coinNum = 0;
     }
 
     private void LateUpdate()
