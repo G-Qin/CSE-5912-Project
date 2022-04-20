@@ -25,7 +25,7 @@ public class BuffManager : MonoBehaviour
     private void Update()
     {
         // Speed Buff
-        if (Input.GetKeyDown(KeyCode.Semicolon) && !speedBuffed && speedBuffRemain > 0)
+        if (Input.GetKeyDown(KeyCode.Z) && !speedBuffed && speedBuffRemain > 0)
         {
             Player.GetComponent<Movement>().BuffSpeed();
             speedBuffed = true;
@@ -43,7 +43,7 @@ public class BuffManager : MonoBehaviour
         }
 
         // Armor Buff
-        if (Input.GetKeyDown(KeyCode.LeftBracket) && !armorBuffed && armorBuffRemain > 0)
+        if (Input.GetKeyDown(KeyCode.X) && !armorBuffed && armorBuffRemain > 0)
         {
             Player.GetComponent<HealthSystem>().ArmorBuffed();
             armorBuffed = true;
@@ -61,7 +61,7 @@ public class BuffManager : MonoBehaviour
         }
 
         // Damage Buff
-        if (Input.GetKeyDown(KeyCode.RightBracket) && !damageBuffed && damageBuffRemain > 0)
+        if (Input.GetKeyDown(KeyCode.C) && !damageBuffed && damageBuffRemain > 0)
         {
             var healthSystemGroup = FindObjectsOfType<HealthSystem>();
             foreach (HealthSystem HS in healthSystemGroup)

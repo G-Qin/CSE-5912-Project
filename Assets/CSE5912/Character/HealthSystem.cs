@@ -89,7 +89,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.U) && HealthPack.GetHealthPackCount() > 0)
+        if (gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.F) && HealthPack.GetHealthPackCount() > 0)
         {
             //Debug.Log("Healed 25!");
             HealthPack.UseHealthPack();

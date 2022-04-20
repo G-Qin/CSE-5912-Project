@@ -25,6 +25,7 @@ public class NerdController : MonoBehaviour
         StartCoroutine("waiter");
         enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
+        healthSystem.SetMaxHealth(100);
     }
 
     // Update is called once per frame

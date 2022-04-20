@@ -24,7 +24,7 @@ public class WyvernController : MonoBehaviour
     void Start()
     {
         alive = true;
-        healthSystem.SetMaxHealth(1000);
+        healthSystem.SetMaxHealth(5000);
         GameObject abc = GameObject.Find("/Canvas/CHealthBar_1");
         DisableHealthBar def = abc.GetComponent<DisableHealthBar>();
         def.BossActive();
@@ -50,7 +50,7 @@ public class WyvernController : MonoBehaviour
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("Ins2Die");
-            coin.addCoin(50);
+            coin.addCoin(1);
             live = false;
             enemy.enabled = false;
             anim.Play("Death");

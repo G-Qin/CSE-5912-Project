@@ -5,110 +5,90 @@ using UnityEngine;
 public class ModifyWeapon : MonoBehaviour
 {
     [SerializeField]
-    public GameObject Player;
-    [SerializeField]
-    public CoinSystem coinSystem;
-
-    private List<int> weaponList;
-
-    private void Awake()
-    {
-        weaponList = Player.GetComponent<InfimaGames.LowPolyShooterPack.Character>().available;
-    }
+    private GameObject replaceCanvas;
 
     // purchase a weapon
 
     #region PURCHASE
-    public void EnableWeapon_0()
+    public void PurchaseWeapon_0()
     {
-        if (!weaponList.Contains(0) && coinSystem.useCoin(1000))
-            weaponList.Add(0);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(0, 7500);
     }
-
-    public void EnableWeapon_1()
+    public void PurchaseWeapon_1()
     {
-        if (!weaponList.Contains(1) && coinSystem.useCoin(1000))
-            weaponList.Add(1);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(1, 6000);
     }
-    public void EnableWeapon_2()
+    public void PurchaseWeapon_2()
     {
-        if (!weaponList.Contains(2) && coinSystem.useCoin(1000))
-            weaponList.Add(2);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(2, 5000);
     }
-    public void EnableWeapon_3()
+    public void PurchaseWeapon_3()
     {
-        if (!weaponList.Contains(3) && coinSystem.useCoin(1000))
-            weaponList.Add(3);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(3, 8000);
     }
-    public void EnableWeapon_4()
+    public void PurchaseWeapon_4()
     {
-        if (!weaponList.Contains(4) && coinSystem.useCoin(1000))
-            weaponList.Add(4);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(4, 4000);
     }
-    public void EnableWeapon_5()
+    public void PurchaseWeapon_5()
     {
-        if (!weaponList.Contains(5) && coinSystem.useCoin(1000))
-            weaponList.Add(5);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(5, 9000);
     }
-    public void EnableWeapon_6()
+    public void PurchaseWeapon_6()
     {
-        if (!weaponList.Contains(6) && coinSystem.useCoin(1000))
-            weaponList.Add(6);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(6, 500);
     }
-    public void EnableWeapon_7()
+    public void PurchaseWeapon_7()
     {
-        if (!weaponList.Contains(7) && coinSystem.useCoin(1000))
-            weaponList.Add(7);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(7, 3000);
     }
-    public void EnableWeapon_8()
+    public void PurchaseWeapon_8()
     {
-        if (!weaponList.Contains(8) && coinSystem.useCoin(1000))
-            weaponList.Add(8);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(8, 10000);
     }
-    public void EnableWeapon_9()
+    public void PurchaseWeapon_10()
     {
-        if (!weaponList.Contains(9) && coinSystem.useCoin(1000))
-            weaponList.Add(9);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(10, 4500);
     }
-    public void EnableWeapon_10()
+    public void PurchaseWeapon_11()
     {
-        if (!weaponList.Contains(10) && coinSystem.useCoin(1000))
-            weaponList.Add(10);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(11, 5500);
     }
-    public void EnableWeapon_11()
+    public void PurchaseWeapon_12()
     {
-        if (!weaponList.Contains(11) && coinSystem.useCoin(1000))
-                weaponList.Add(11);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(12, 1000);
     }
-    public void EnableWeapon_12()
+    public void PurchaseWeapon_13()
     {
-        if (!weaponList.Contains(12) && coinSystem.useCoin(1000))
-                weaponList.Add(12);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(13, 20000);
     }
-    public void EnableWeapon_13()
+    public void PurchaseWeapon_14()
     {
-        if (!weaponList.Contains(13) && coinSystem.useCoin(1000))
-                weaponList.Add(13);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(14, 6500);
     }
-    public void EnableWeapon_14()
+    public void PurchaseWeapon_16()
     {
-        if (!weaponList.Contains(14) && coinSystem.useCoin(1000))
-                weaponList.Add(14);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(16, 6000);
     }
-    public void EnableWeapon_15()
+    public void PurchaseWeapon_17()
     {
-        if (!weaponList.Contains(15) && coinSystem.useCoin(1000))
-                weaponList.Add(15);
-    }
-    public void EnableWeapon_16()
-    {
-        if (!weaponList.Contains(16) && coinSystem.useCoin(1000))
-                weaponList.Add(16);
-    }
-    public void EnableWeapon_17()
-    {
-        if (!weaponList.Contains(17) && coinSystem.useCoin(1000))
-                weaponList.Add(17);
+        replaceCanvas.SetActive(true);
+        replaceCanvas.GetComponent<ReplaceWeaponChoice>().setCurrentPurchasingWeapon(17, 10000);
     }
     #endregion
 

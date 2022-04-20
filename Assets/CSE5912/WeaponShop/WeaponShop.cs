@@ -24,7 +24,7 @@ public class WeaponShop : MonoBehaviour
     void Update()
     {
         shopAvailable = ShopTrigger.GetComponent<WeaponShopTrigger>().shopAvailable;
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (!gamePaused && shopAvailable)
                 Pause();

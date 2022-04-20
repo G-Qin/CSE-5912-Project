@@ -27,6 +27,7 @@ public class DBcontroller : MonoBehaviour
         StartCoroutine("waiter");
         enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
+        healthSystem.SetMaxHealth(100);
     }
 
     // Update is called once per frame
@@ -39,7 +40,7 @@ public class DBcontroller : MonoBehaviour
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("Ins2Die");
-            coin.addCoin(50);
+            coin.addCoin(125);
             live = false;
             enemy.enabled = false;
             GetComponent<Rigidbody>().detectCollisions = false;
