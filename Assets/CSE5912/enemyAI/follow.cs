@@ -23,6 +23,7 @@ public class follow : MonoBehaviour
         StartCoroutine("waiter");
         enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
+        healthSystem.SetMaxHealth(250);
 
         //Player=GameObject.Find("/P_LPSP_FP_CH_1/SK_FP_CH_Default_Root/Armature/root/pelvis/spine_01/spine_02/spine_03/neck_01/head/SOCKET_Camera/Camera/Camera Depth");
     }
@@ -34,7 +35,7 @@ public class follow : MonoBehaviour
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("GetAttack");
-            coin.addCoin(100);
+            coin.addCoin(200);
             live = false;
             enemy.enabled = false;
             GetComponent<Rigidbody>().detectCollisions = false;

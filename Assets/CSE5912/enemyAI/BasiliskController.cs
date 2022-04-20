@@ -28,6 +28,7 @@ public class BasiliskController : MonoBehaviour
         StartCoroutine("waiter");
         enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
+        healthSystem.SetMaxHealth(150);
 
     }
 
@@ -41,7 +42,7 @@ public class BasiliskController : MonoBehaviour
         {
             alive = false;
             FindObjectOfType<SoundManager>().Play("Ins1Die");
-            coin.addCoin(150);
+            coin.addCoin(300);
             live = false;
             enemy.enabled = false;
             GetComponent<Rigidbody>().detectCollisions = false;
