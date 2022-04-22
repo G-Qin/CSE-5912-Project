@@ -123,6 +123,9 @@ namespace InfimaGames.LowPolyShooterPack
 
 		#region FIELDS
 
+		[SerializeField]
+		private BulletDamageSystem bulletDamageSystem;
+
 		/// <summary>
 		/// True if the character is aiming.
 		/// </summary>
@@ -444,6 +447,9 @@ namespace InfimaGames.LowPolyShooterPack
 			
 			//Save Aiming Value.
 			wasAiming = aiming;
+
+			//Checking weapon index and update bullet damage.
+			bulletDamageSystem.setBulletDamage(inventory.GetEquippedIndex());
 		}
 
 		protected override void LateUpdate()
@@ -886,11 +892,19 @@ namespace InfimaGames.LowPolyShooterPack
 		}
 
 		/// <summary>
-		/// Update the cursor's status outside of this script
+		/// Update the cursor's status outside of this script.
 		/// </summary>
 		public void UpdateCursor()
         {
 			cursorLocked = !cursorLocked;
+        }
+
+		/// <summary>
+		/// Buy one grenade.
+		/// </summary>
+		public void AddGrenade()
+        {
+			grenadeCount++;
         }
 
 		#region ACTION CHECKS
@@ -1383,7 +1397,7 @@ namespace InfimaGames.LowPolyShooterPack
 					//Get the next index to switch to.
 					int indexNext = scrollValue > 0 ? inventory.GetNextIndex() : inventory.GetLastIndex();
 					//Get the current weapon's index.
-					int indexCurrent = inventory.GetEquippedIndex();
+					int indexCurrent = available.IndexOf(inventory.GetEquippedIndex());
 					
 					//Make sure we're allowed to change, and also that we're not using the same index, otherwise weird things happen!
 					if (CanChangeWeapon() && (indexCurrent != indexNext))

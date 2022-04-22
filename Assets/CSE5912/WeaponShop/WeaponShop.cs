@@ -16,7 +16,7 @@ public class WeaponShop : MonoBehaviour
     [SerializeField]
     public GameObject ShopTrigger;
 
-    public static bool gamePaused = false;
+    private bool gamePaused = false;
     private bool shopAvailable;
 
 
@@ -24,13 +24,15 @@ public class WeaponShop : MonoBehaviour
     void Update()
     {
         shopAvailable = ShopTrigger.GetComponent<WeaponShopTrigger>().shopAvailable;
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (!gamePaused && shopAvailable)
                 Pause();
             else if (gamePaused)
                 Resume();
         }
+        if (gamePaused && Input.GetKeyDown(KeyCode.Escape))
+            Resume();
     }
 
     public void Resume()
@@ -64,4 +66,6 @@ public class WeaponShop : MonoBehaviour
         // Change cursor status in Character
         Player.GetComponent<InfimaGames.LowPolyShooterPack.Character>().UpdateCursor();
     }
+
+    public bool getGamePauseState() => gamePaused;
 }

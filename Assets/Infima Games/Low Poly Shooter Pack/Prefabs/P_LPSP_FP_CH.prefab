@@ -981,6 +981,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 35aa15aa460d5704383e356a55b0b147, type: 3}
   - {fileID: 8300000, guid: 66e20a1df4a8a004e9e3eec624d38c28, type: 3}
   - {fileID: 8300000, guid: 058ad0f0e88b6054990c6e98008ae4ea, type: 3}
+  bulletDamageSystem: {fileID: 0}
 --- !u!114 &8163229473432397683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,8 +995,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasPrefab: {fileID: 5393623835024644669, guid: 48d7771c50bd625489d38055025597a3,
-    type: 3}
-  qualitySettingsPrefab: {fileID: 5965040680208419700, guid: 458b1dae88c7baf46a163b218ce42a30,
     type: 3}
 --- !u!114 &4190955791512926966
 MonoBehaviour:
@@ -1292,22 +1291,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8dfbac0a-435e-4fa0-a00f-21b90315bd84
     m_ActionName: Player/Inventory Next Wheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 434113066}
-        m_TargetAssemblyTypeName: InfimaGames.LowPolyShooterPack.Character, Assembly-CSharp
-        m_MethodName: OnLockCursor
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9beb2473-ee7d-4a54-857b-b42a64a66a65
-    m_ActionName: Player/Lock Cursor[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 434113066}
@@ -9770,6 +9753,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 16e474626b69d024f8bf7c812763932a, type: 3}
+      propertyPath: m_TagString
+      value: Knife
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 16e474626b69d024f8bf7c812763932a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9828,3 +9815,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7447013278991346388}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &4236852149278901209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447013278991314036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.2, z: 0.3}
+  m_Center: {x: -0.00000003633791, y: -0.0128939245, z: 0.006041676}

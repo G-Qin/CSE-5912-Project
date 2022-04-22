@@ -112,6 +112,11 @@ namespace InfimaGames.LowPolyShooterPack.Legacy
 					//Toggle "explode" on explosive barrel object
 					hit.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
 				}
+				if (hit.GetComponent<Collider>().tag == "Enemy" || hit.GetComponent<Collider>().tag == "DragonBug")
+				{
+					//Toggle "explode" on explosive barrel object
+					hit.gameObject.GetComponent<HealthSystem>().Damage(100);
+				}
 
 				//If the explosion hits "GasTank" tag
 				if (hit.GetComponent<Collider>().tag == "GasTank")

@@ -348,7 +348,7 @@ public partial class @IA_Player : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6ab3c0c1-413c-4596-93a8-b92c2eb0157b"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class follow : MonoBehaviour
 {
+    private BulletDamageSystem bulletDamageSystem;
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Animator anim;
@@ -14,13 +16,16 @@ public class follow : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         anim = GetComponent<Animator>();
         live = true;
         Player =GameObject.Find("/P_LPSP_FP_CH_1").transform;
+        bulletDamageSystem = GameObject.Find("/P_LPSP_FP_CH_1").GetComponent<BulletDamageSystem>();
         coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         StartCoroutine("waiter");
         enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
+        healthSystem.SetMaxHealth(250);
 
         //Player=GameObject.Find("/P_LPSP_FP_CH_1/SK_FP_CH_Default_Root/Armature/root/pelvis/spine_01/spine_02/spine_03/neck_01/head/SOCKET_Camera/Camera/Camera Depth");
     }
@@ -28,13 +33,32 @@ public class follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (healthSystem.getHealth() <= 0 && live)
+        {
+            alive = false;
+            //FindObjectOfType<SoundManager>().Play("GetAttack");
+            coin.addCoin(200);
+            live = false;
+            enemy.enabled = false;
+            GetComponent<Rigidbody>().detectCollisions = false;
+            m_Collider.enabled = !m_Collider.enabled;
+            anim.SetBool("dead", true);
+            //StartCoroutine("waiter");
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            Destroy(gameObject, 3.0f);
+        }
+        else
+        {
+            anim.SetBool("dead", false);
+        }
     }
     IEnumerator waiter()
     {
         if (live == true)
         {
             float dist = Vector3.Distance(Player.position, transform.position);
-            if (dist < 1)
+            if (dist < 1.5)
             {
                 enemy.ResetPath();
                 anim.SetBool("run", false);
@@ -64,26 +88,15 @@ public class follow : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collisionInfo)
     {
-        //Debug.Log("Hit!!" + collisionInfo.collider.tag);
         if (collisionInfo.collider.tag == "Bullet")
         {
-            healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
-            {
-                FindObjectOfType<SoundManager>().Play("GetAttack");
-                coin.addCoin(100);
-                live = false;
-                enemy.enabled = false;
-                anim.SetBool("dead", true);
-                //StartCoroutine("waiter");
-                //gameObject.SetActive(false);
-                //Destroy(gameObject);
-                Destroy(gameObject, 3.0f);
-            }
-            else
-            {
-                anim.SetBool("dead", false);
-            }
+            healthSystem.Damage(bulletDamageSystem.getBulletDamage());
+            Debug.Log("Damage :" + bulletDamageSystem.getBulletDamage());
+        }
+        if (collisionInfo.collider.tag == "Knife")
+        {
+            healthSystem.Damage(30);
+            Debug.Log("Damage :" + 30);
         }
 
     }

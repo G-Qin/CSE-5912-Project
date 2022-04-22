@@ -19,6 +19,12 @@ TagManager:
   - Bullet
   - Enemy
   - EnemyWeapon
+  - EnemyWeapom
+  - WeaponShop
+  - FireRain
+  - DragonBug
+  - DragonAttack
+  - Knife
   layers:
   - Default
   - TransparentFX

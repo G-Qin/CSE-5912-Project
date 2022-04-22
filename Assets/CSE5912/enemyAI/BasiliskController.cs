@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class BasiliskController : MonoBehaviour
 {
+    private BulletDamageSystem bulletDamageSystem;
+    public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
     public Transform attack;
@@ -17,15 +19,18 @@ public class BasiliskController : MonoBehaviour
     Collider m_Collider;
     void Start()
     {
+        alive = true;
         FindObjectOfType<SoundManager>().Play("Ins");
         anim = gameObject.GetComponent<Animation>();
         live = true;
         Player = GameObject.Find("/P_LPSP_FP_CH_1").transform;
+        bulletDamageSystem = GameObject.Find("/P_LPSP_FP_CH_1").GetComponent<BulletDamageSystem>();
         coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         StartCoroutine("waiter");
         enemy.enabled = true;
         m_Collider = GetComponent<Collider>();
+        healthSystem.SetMaxHealth(150);
 
     }
 
@@ -35,6 +40,21 @@ public class BasiliskController : MonoBehaviour
         Vector3 direction = (Player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+        if (healthSystem.getHealth() == 0 && live)
+        {
+            alive = false;
+            //FindObjectOfType<SoundManager>().Play("Ins1Die");
+            coin.addCoin(300);
+            live = false;
+            enemy.enabled = false;
+            GetComponent<Rigidbody>().detectCollisions = false;
+            m_Collider.enabled = !m_Collider.enabled;
+            anim.Play("Death1");
+            //StartCoroutine("waiter");
+            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            Destroy(gameObject, 3.0f);
+        }
     }
     IEnumerator waiter()
     {
@@ -69,22 +89,15 @@ public class BasiliskController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collisionInfo)
     {
-        //Debug.Log("Hit!!" + collisionInfo.collider.tag);
         if (collisionInfo.collider.tag == "Bullet")
         {
-            healthSystem.Damage(bulletDamage);
-            if (healthSystem.getHealth() == 0)
-            {
-                FindObjectOfType<SoundManager>().Play("Ins1Die");
-                coin.addCoin(150);
-                live = false;
-                enemy.enabled = false;
-                anim.Play("Death1");
-                //StartCoroutine("waiter");
-                //gameObject.SetActive(false);
-                //Destroy(gameObject);
-                Destroy(gameObject, 3.0f);
-            }
+            healthSystem.Damage(bulletDamageSystem.getBulletDamage());
+            Debug.Log("Damage :" + bulletDamageSystem.getBulletDamage());
+        }
+        if (collisionInfo.collider.tag == "Knife")
+        {
+            healthSystem.Damage(30);
+            Debug.Log("Damage :" + 30);
         }
 
     }

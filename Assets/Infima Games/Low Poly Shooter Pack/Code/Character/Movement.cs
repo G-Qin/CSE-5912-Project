@@ -332,6 +332,20 @@ namespace InfimaGames.LowPolyShooterPack
                 audioSource.Pause();
         }
 
+        public void BuffSpeed()
+        {
+            speedWalking *= 1.5f;
+            speedAiming *= 1.5f;
+            speedRunning *= 1.5f;
+        }
+
+        public void UnBuffSpeed()
+        {
+            speedWalking /= 1.5f;
+            speedAiming /= 1.5f;
+            speedRunning /= 1.5f;
+        }
+
         #endregion
 
         #region GETTERS

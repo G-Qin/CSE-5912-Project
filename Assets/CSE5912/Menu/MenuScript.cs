@@ -25,6 +25,9 @@ public class MenuScript : MonoBehaviour
     [SerializeField]
     private GameObject Player;
 
+    [SerializeField]
+    private WeaponShop weaponShop;
+
     private bool gamePaused = false;
     private bool menuIsOpen = false;
     private bool optionIsOpen = false;
@@ -35,7 +38,7 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!weaponShop.getGamePauseState() && Input.GetKeyDown(KeyCode.Escape))
         {
             if (gamePaused)
                 Resume();
@@ -46,9 +49,12 @@ public class MenuScript : MonoBehaviour
 
     public void Resume()
     {
-        // Close menu and resume game
+        // Close all menus and resume game
         MenuCanvas.SetActive(false);
         OptionsCanvas.SetActive(false);
+        QualityCanvas.SetActive(false);
+        SensitivityCanvas.SetActive(false);
+        AudioCanvas.SetActive(false);
         Time.timeScale = 1f;
         gamePaused = false;
 
@@ -63,6 +69,9 @@ public class MenuScript : MonoBehaviour
         // Modify bool values
         menuIsOpen = false;
         optionIsOpen = false;
+        qualityIsOpen = false;
+        sensitivityIsOpen = false;
+        audioIsOpen = false;
     }
 
     public void Pause()

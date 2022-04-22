@@ -1,13 +1,26 @@
 using UnityEngine;
+using System.Collections;
 
 public class HealthSystem : MonoBehaviour
 {
+    private bool ArmorBuffActive = false;
+    private bool DamageBuffActive = false;
+
     private int health;
     private int maxHealth;
     public HealthBar healthbar;
+    public GameObject hitCrosshair;
+    public GameObject canvas;
 
     [SerializeField]
     public HealthPack HealthPack;
+
+    void Start(){
+        if (!gameObject.tag.Equals("Player")){
+            hitCrosshair = GameObject.Find("/Canvas/BulletHitCrosshair");
+        }
+    }
+
     private void Awake()
     {
         maxHealth = 100;
@@ -16,11 +29,12 @@ public class HealthSystem : MonoBehaviour
         //Debug.Log(100);
     }
 
-    //public HealthSystem(int maxHealth)
-    //{
-    //    this.maxHealth = maxHealth;
-    //    health = maxHealth;
-    //}
+    public void SetMaxHealth(int maxHealth)
+    {
+        this.maxHealth = maxHealth;
+        health = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
+    }
 
     public int getHealth()
     {
@@ -30,13 +44,32 @@ public class HealthSystem : MonoBehaviour
     public void Damage(int damageValue)
     {
         if (health > 0) {
-            health -= damageValue;
-            
+            // For player health system
+            if (gameObject.tag.Equals("Player"))
+            {
+                if (ArmorBuffActive)
+                    health -= damageValue / 2;
+                else
+                    health -= damageValue;
+            }
+
+            // For enemy health system
+            if (!gameObject.tag.Equals("Player"))
+            {
+                hitCrosshair.GetComponent<HitCrosshairScript>().EnableHitCrosshair();
+                StartCoroutine(WaitToDisableHC());
+                if (DamageBuffActive)
+                    health -= damageValue * 3 / 2;
+                else
+                    health -= damageValue;
+            }
+
             if (health <= 0)
             {
                 health = 0;
-                if (gameObject.tag == "Enemy"){
+                if (gameObject.tag.Equals("Enemy") || gameObject.tag.Equals("DragonBug")){
                     GameObject.Find("LevelManager").GetComponent<LevelManager>().EnemyDeath();
+                    FindObjectOfType<SoundManager>().Play("EnemyKillSound");
                 }
             }
         }
@@ -56,7 +89,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.U) && HealthPack.GetHealthPackCount() > 0)
+        if (gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.F) && HealthPack.GetHealthPackCount() > 0)
         {
             //Debug.Log("Healed 25!");
             HealthPack.UseHealthPack();
@@ -65,6 +98,34 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
+    #region BUFF METHODS
+    public void ArmorBuffed()
+    {
+        if (gameObject.tag.Equals("Player"))
+            ArmorBuffActive = true;
+    }
+
+    public void ArmorUnBuffed()
+    {
+        ArmorBuffActive = false;
+    }
+
+    public void DamageBuffed()
+    {
+        if (!gameObject.tag.Equals("Player"))
+            DamageBuffActive = true;
+    }
+
+    public void DamageUnBuffed()
+    {
+        DamageBuffActive = false;
+    }
+    #endregion
+
+    IEnumerator WaitToDisableHC(){
+        yield return new WaitForSeconds(0.5f);
+        hitCrosshair.GetComponent<HitCrosshairScript>().DisableHitCrosshair();
+    }
 }
 
 

@@ -29,6 +29,7 @@ public class HealthPack : MonoBehaviour
         {
             healthPackCount--;
             gameObject.GetComponent<HealthPackEffect>().DoHealingEffect();
+            FindObjectOfType<SoundManager>().Play("HealthPackSound");
         }
     }
 
