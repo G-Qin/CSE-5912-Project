@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class WyvernController : MonoBehaviour
 {
+    private BulletDamageSystem bulletDamageSystem;
     public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
@@ -32,6 +33,7 @@ public class WyvernController : MonoBehaviour
         anim = gameObject.GetComponent<Animation>();
         live = true;
         Player = GameObject.Find("/P_LPSP_FP_CH_1").transform;
+        bulletDamageSystem = GameObject.Find("/P_LPSP_FP_CH_1").GetComponent<BulletDamageSystem>();
         PlayerHealth = Player.GetComponent<HealthSystem>(); // For test.
         coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         StartCoroutine("waiter");
@@ -121,8 +123,13 @@ public class WyvernController : MonoBehaviour
         //Debug.Log("Hit!!" + collisionInfo.collider.tag);
         if (collisionInfo.collider.tag == "Bullet")
         {
-            healthSystem.Damage(bulletDamage);
-           
+            healthSystem.Damage(bulletDamageSystem.getBulletDamage());
+            Debug.Log("Damage :" + bulletDamageSystem.getBulletDamage());
+        }
+        if (collisionInfo.collider.tag == "Knife")
+        {
+            healthSystem.Damage(30);
+            Debug.Log("Damage :" + 30);
         }
 
     }

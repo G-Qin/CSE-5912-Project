@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class follow : MonoBehaviour
 {
+    private BulletDamageSystem bulletDamageSystem;
     public bool alive;
     public NavMeshAgent enemy;
     public Transform Player;
@@ -19,6 +20,7 @@ public class follow : MonoBehaviour
         anim = GetComponent<Animator>();
         live = true;
         Player =GameObject.Find("/P_LPSP_FP_CH_1").transform;
+        bulletDamageSystem = GameObject.Find("/P_LPSP_FP_CH_1").GetComponent<BulletDamageSystem>();
         coin = GameObject.Find("/Canvas/Score").GetComponent<CoinSystem>();
         StartCoroutine("waiter");
         enemy.enabled = true;
@@ -86,11 +88,15 @@ public class follow : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collisionInfo)
     {
-        //Debug.Log("Hit!!" + collisionInfo.collider.tag);
         if (collisionInfo.collider.tag == "Bullet")
         {
-            healthSystem.Damage(bulletDamage);
-            
+            healthSystem.Damage(bulletDamageSystem.getBulletDamage());
+            Debug.Log("Damage :" + bulletDamageSystem.getBulletDamage());
+        }
+        if (collisionInfo.collider.tag == "Knife")
+        {
+            healthSystem.Damage(30);
+            Debug.Log("Damage :" + 30);
         }
 
     }
