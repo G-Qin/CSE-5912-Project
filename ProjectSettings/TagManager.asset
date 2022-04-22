@@ -24,6 +24,7 @@ TagManager:
   - FireRain
   - DragonBug
   - DragonAttack
+  - Knife
   layers:
   - Default
   - TransparentFX

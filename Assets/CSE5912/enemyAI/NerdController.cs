@@ -78,6 +78,11 @@ public class NerdController : MonoBehaviour
             healthSystem.Damage(bulletDamageSystem.getBulletDamage());
             Debug.Log("Damage :" + bulletDamageSystem.getBulletDamage());
         }
+        if (collisionInfo.collider.tag == "Knife")
+        {
+            healthSystem.Damage(30);
+            Debug.Log("Damage :" + 30);
+        }
 
     }
 }
