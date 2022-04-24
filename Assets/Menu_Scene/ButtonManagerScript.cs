@@ -16,6 +16,7 @@ public class ButtonManagerScript : MonoBehaviour
    }
     public void StartGame()
     {
+        PlayerPrefs.SetInt("IsRetrying", 0);
         LoadingPanel.SetActive(true);
         Debug.Log("Starting game");
         loadingOperation = SceneManager.LoadSceneAsync("Map_v7");

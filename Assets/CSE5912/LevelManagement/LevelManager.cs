@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
 {
     public TextMeshProUGUI counterText;
     [SerializeField]
-    int levelNum;
+    public int levelNum;
 
     [SerializeField]
     int maxLevelNum;
@@ -48,6 +48,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     GameObject areaSwitchText;
 
+    [SerializeField]
+    GameObject saveManager;
+
     private bool levelInProgress = false;
     private List<string> levelInfo = new List<string>();
     private int numOfEnemy = 0;
@@ -57,17 +60,27 @@ public class LevelManager : MonoBehaviour
     
     void Start()
     {
+        // If it's a retry level, load the data
+        if (PlayerPrefs.GetInt("IsRetrying") == 1){
+            saveManager.GetComponent<SaveScript>().LoadCurrLevelData();
+            levelNum = PlayerPrefs.GetInt("LevelNum");
+            LoadLevel(levelNum);
+        } else {
+            // Load the first level
+            LoadLevel(levelNum);
+        }
         // Hide counter text at start
         counterText.text = "";
-        // TO-DO: Game instructions?
 
-        // Load the first level
-        LoadLevel(levelNum);      
+              
     }
 
     private void LoadLevel(int levelNumber){
         // Level hasn't started
         levelInProgress = false;
+
+        // Save the status of this level
+        saveManager.GetComponent<SaveScript>().SaveCurrentLevel();
 
         // Wait 10 to 15 seconds for preparation
         StartCoroutine(LevelWait());

@@ -5,11 +5,11 @@ using UnityEngine;
 public class HealthPack : MonoBehaviour
 {
     [SerializeField]
-    private CoinSystem CoinSystem;
+    public CoinSystem CoinSystem;
     [SerializeField]
     private HealthSystem PlayerHealthSystem;
 
-    private int healthPackCount;
+    public int healthPackCount;
 
     void Awake()
     {

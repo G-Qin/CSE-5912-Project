@@ -15,7 +15,11 @@ public class GameOverButtonManager : MonoBehaviour
     }
 
     public void QuitGame(){
-        Debug.Log("Quitting");
         Application.Quit();
+    }
+
+    public void ReloadThisLevel(){
+        PlayerPrefs.SetInt("IsRetrying", 1);
+        SceneManager.LoadScene("Map_v7");
     }
 }

@@ -18,9 +18,9 @@ public class BuffManager : MonoBehaviour
     private int armorBuffTimer = 0;
     private int damageBuffTimer = 0;
 
-    private int speedBuffRemain = 1;
-    private int armorBuffRemain = 1;
-    private int damageBuffRemain = 1;
+    public int speedBuffRemain = 1;
+    public int armorBuffRemain = 1;
+    public int damageBuffRemain = 1;
 
     private void Update()
     {
