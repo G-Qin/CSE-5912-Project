@@ -39,7 +39,7 @@ namespace InfimaGames.LowPolyShooterPack
 
 		[Tooltip("Total amount of grenades at start.")]
 		[SerializeField]
-		private int grenadeTotal = 10;
+		public int grenadeTotal = 10;
 		
 		[Tooltip("Grenade spawn offset from the character's camera.")]
 		[SerializeField]

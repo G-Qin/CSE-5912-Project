@@ -6,7 +6,7 @@ public class HealthSystem : MonoBehaviour
     private bool ArmorBuffActive = false;
     private bool DamageBuffActive = false;
 
-    private int health;
+    public int health;
     private int maxHealth;
     public HealthBar healthbar;
     public GameObject hitCrosshair;

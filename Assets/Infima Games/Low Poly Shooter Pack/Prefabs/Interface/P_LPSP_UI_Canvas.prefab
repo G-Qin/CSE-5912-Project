@@ -457,7 +457,7 @@ MonoBehaviour:
 
     Melee:
 
-    - F key to use
+    - V key to use
     knife attack.
 
 
@@ -469,14 +469,14 @@ MonoBehaviour:
     Buffs:
 
     -
-    '';'' key to use speed buff
+    Z key to use speed buff
 
-    - ''['' key to use armor buff
+    - X key to use armor buff
 
-    - '']'' key
-    to use damage buff
+    - C key to use damage
+    buff
 
-    - U key to use health pack'
+    - F key to use health pack'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 52822dc6e80b18c4b84fa37fb0a9018f, type: 2}
   m_sharedMaterial: {fileID: -5066701443530399222, guid: 52822dc6e80b18c4b84fa37fb0a9018f,
